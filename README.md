@@ -8,8 +8,6 @@ sidebar:
   nav: docs
 ---
 
-<div style="margin: 0 auto; text-align: center">
-  <img src="docs/media/skyve-logo.png" width="300" alt="Skyve logo" />
-</div>
+![Skyve logo]({{ site.url }}{{ site.baseurl }}/assets/images/skyve-logo.png){: .align-center}
 
 Welcome to the Sykve User Guide. Use the index on the left to navigate or search.
