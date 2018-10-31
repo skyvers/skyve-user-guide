@@ -5,5 +5,5 @@
 
 ### Contents
 
-* [Content Search](docs/content-search.md)
-* [Data Maintenance](docs/data-maintenance.md)
+* [Content Search](docs/_docs/content-search.md)
+* [Data Maintenance](docs/_docs/data-maintenance.md)
