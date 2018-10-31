@@ -1,11 +1,9 @@
-## Content Search
-
-### Contents
-
-* [Contents](README.md)
-* **[Content Search](#content-search)**
-  * [Global Search](#global-search)
-
+---
+title: "Content Search"
+permalink: /docs/content-search/
+excerpt: "Using global search within a Skyve application."
+toc: true
+---
 Skyve applications include the powerful open-source search library, [Elasticsearch](https://www.elastic.co/products/elasticsearch), for indexing and searching both data and content within an application.
 
 By default, all text area fields and uploaded text files are indexed and available to be searched.
