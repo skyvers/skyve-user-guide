@@ -6,6 +6,14 @@ remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-include-cache
 
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+keep_files:
+  - .git
+encoding: "utf-8"
+
 # Defaults
 defaults:
   # _pages
