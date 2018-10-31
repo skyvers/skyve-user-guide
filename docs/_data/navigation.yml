@@ -1,7 +1,0 @@
-docs:
-  - title: Admin Module
-    children:
-      - title: "Content Search"
-        url: /docs/content-search/
-      - title: "Data Maintenance"
-        url: /docs/data-maintenance/
