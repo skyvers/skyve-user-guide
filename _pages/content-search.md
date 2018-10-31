@@ -18,11 +18,11 @@ To use the global search function from a Skyve application:
 1. Login to your application
 2. From the top right hand corner, switch to power user mode if not already in there
 
-    ![](/assets/images/switch.png "Switch mode")
+    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
 3. From the command panel, click the search icon
 
-    ![](/assets/images/search.png "Global search button")
+    ![Global search button]({{ site.url }}{{ site.baseurl }}/assets/images/search.png)
 
 4. Enter a search term into the search field and click `Search`
 5. Search results will be returned in order of relevance, showing which document the result was found in and an except of the resulting match

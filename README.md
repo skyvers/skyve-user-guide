@@ -2,18 +2,14 @@
 title: "Skyve User Guide"
 permalink: /
 excerpt: "End user guide for Skyve Enterprise applications"
-toc: true
+toc: false
 sidebar:
   title: "Index"
   nav: docs
 ---
 
-<img src="docs/media/skyve-logo.png" width="300" style="margin: 0 auto; text-align: center" alt="Skyve logo" />
+<div style="margin: 0 auto; text-align: center">
+  <img src="docs/media/skyve-logo.png" width="300" alt="Skyve logo" />
+</div>
 
-# Skyve Enterprise Platform
-## User Guide
-
-### Contents
-
-* [Content Search](/content-search)
-* [Data Maintenance](/data-maintenance)
+Welcome to the Sykve User Guide. Use the index on the left to navigate or search.

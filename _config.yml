@@ -7,6 +7,9 @@ description              : End user guide for applications written using the Sky
 url                      : https://skyvers.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/skyve-user-guide"
 
+search                   : true
+search_full_content      : true
+
 # Social Sharing
 twitter:
   username               : &twitter "skyveframework"
