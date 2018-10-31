@@ -3,6 +3,9 @@ title: "Content Search"
 permalink: /content-search/
 excerpt: "Using global search within a Skyve application."
 toc: true
+sidebar:
+  title: "Index"
+  nav: docs
 ---
 Skyve applications include the powerful open-source search library, [Elasticsearch](https://www.elastic.co/products/elasticsearch), for indexing and searching both data and content within an application.
 
