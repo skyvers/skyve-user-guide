@@ -1,8 +1,12 @@
 title: Skyve User Guide
 description: End user guide for applications written using the Skyve framework.
 remote_theme: "mmistakes/minimal-mistakes"
+
+# Plugins
 plugins:
   - jekyll-include-cache
+
+# Defaults
 defaults:
   # _pages
   - scope:
@@ -10,3 +14,11 @@ defaults:
       type: pages
     values:
       layout: single
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      sidebar:
+        nav: "docs"
