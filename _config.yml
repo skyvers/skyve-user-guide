@@ -7,8 +7,16 @@ description              : End user guide for applications written using the Sky
 url                      : https://skyvers.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/skyve-user-guide"
 
-search                   : true
-search_full_content      : true
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : algolia # lunr (default), algolia
+algolia:
+  application_id         : DBIMRN0AWB # YOUR_APPLICATION_ID
+  index_name             : skyve-user-guide # YOUR_INDEX_NAME
+  search_only_api_key    : d0b5e167e59b1a5098d6e23ffccf38fe # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             : true # true (default), false
+  #files_to_exclude:
+  #  - _posts/2017-11-28-post-exclude-search.md
 
 # Social Sharing
 twitter:
