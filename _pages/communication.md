@@ -16,7 +16,10 @@ _Prerequisites:_ Your application has its SMPT settings configured to enable sen
 The following example will walk through using the built in Communication feature from the admin module to send an email from within a Skyve application. In this example, we will use the Tag feature to select some Contacts as the recipients of the test email.
 
 1. Login with a user which has the `ContactManager` or `SecurityAdministrator` role
-2. Switch to power user mode if not already in there
+2. From the top right hand corner, switch to power user mode if not already in there
+
+    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
+    
 3. Navigate to the Admin module, and select `Contacts`
 4. From the toolbar Tag dropdown, select `New Tag`
 

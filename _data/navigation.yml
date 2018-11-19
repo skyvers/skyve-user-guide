@@ -1,6 +1,8 @@
 docs:
   - title: Admin Module
     children:
+      - title: "Communication"
+        url: /communication/
       - title: "Content Search"
         url: /content-search/
       - title: "Data Maintenance"
