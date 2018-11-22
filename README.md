@@ -56,7 +56,7 @@ The alternate interface, _power user mode_, is great for desktop browsers where 
 
 To switch interfaces, click the switch icon from the top right hand corner. In _normal_ mode, this is accessed by clicking your username, and selecting the switch mode icon from the user menu.
 
-    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
+  ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
 In _power user_ mode, the same switch icon is available from the toolbar at the top of the application.
 
