@@ -21,9 +21,7 @@ Communication templates are designed to be used as a rich email template, to sup
 5. Enter `Responsive Template` into Name
 6. Optionally provide your template with a description. This can be used to identify what they are used for if you have multiple templates in your system.
 7. To the right of the Template field, click `Edit`
-8. As we are creating a HTML email template, we need to edit the source code. This is not a requirement, and basic layout can be created using the editor, but HTML is required to completely style an email.
-
-Click the `Source` button to switch the editor to source code mode.
+8. As we are creating a HTML email template, we need to edit the source code. This is not a requirement, and basic layout can be created using the editor, but HTML is required to completely style an email. Click the `Source` button to switch the editor to source code mode.
 
     ![Source button]({{ site.url }}{{ site.baseurl }}/assets/images/communication-template/comm-template-1.png)
 
