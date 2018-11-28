@@ -3,6 +3,8 @@ docs:
     children:
       - title: "Communication"
         url: /communication/
+      - title: "Communication Templates"
+        url: /communication-templates/
       - title: "Content Search"
         url: /content-search/
       - title: "Data Maintenance"
