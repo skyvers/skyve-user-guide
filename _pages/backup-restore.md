@@ -1,7 +1,7 @@
 ---
 title: "Backup and restore"
 permalink: /backup-restore/
-excerpt: "Using Skyve backupa and restore."
+excerpt: "Using Skyve backup and restore."
 toc: true
 sidebar:
   title: "Index"
@@ -16,11 +16,10 @@ Skyve provides a powerful backup and restore facility that offers a unique range
 
 Feature | Description
 --------|------------
-platform independent | e.g. backups taken on Windows systems can be restored to Linux systems and vice versa  
-database independent | e.g. backups taken from a system using one database provider (e.g. MS SQL Server) can be restored to systems using another provider (e.g. Oracle, H2 or MySQL) and vice versa
-includes structured and non-structured data | backups include both SQL/relational/structured database data as well as non-structured/non-sql content items (note that structured and non-structured data are not necessarily guaranteed to be synchronised)
-
-Skyve also offers a range of restore *Pre-Process* options to handle cases where a backup was taken from an application with v1 domain model or schema and is restored to an application running v2, or vice versa.
+*platform independent* | e.g. backups taken on Windows systems can be restored to Linux systems and vice versa  
+*database independent* | e.g. backups taken from a system using one database provider (e.g. MS SQL Server) can be restored to systems using another provider (e.g. Oracle, H2 or MySQL) and vice versa
+*includes structured and non-structured data* | backups include both SQL/relational/structured database data as well as non-structured/non-sql content items (note that structured and non-structured data are not necessarily guaranteed to be synchronised)
+*handles schema 'drift'* | Skyve offers a range of restore *Pre-Process* options to handle cases where a backup was taken from an application with *version x* domain model or schema and is restored to an application running *version y* and vice versa
 
 *NOTE* that Skyve backup and restore is an application wide function - across all customer data segments. If your application is a multi-tenant SaaS application, you should consider carefully both backup and restore options.
 
@@ -60,7 +59,8 @@ To access the cyclic retention settings:
     
 3. Navigate to the Admin module, and select the *Data Maintenance* menu item
 4. Switch to the *Backups* tab
-5. The cyclic retention settings are located at the top of the tab as shown below.
+5. Set the cyclic retention settings (shown below) as required.
+6. Press `Save` to save your settings
 
 ![Cyclic backup retention](./../assets/images/backup-restore/cyclic-period-schedule.png "Cyclic backup retention")
 
@@ -125,5 +125,7 @@ Option | Availability | Description
 *Create tables from backup* | Single tenant | Use this option when you've created a empty schema (manually or scripted).
 *Create tables from metadata* | Single tenant | Use this option when you have a empty schema but the backup application version doesn't match your version.
 *Delete existing table data using metadata* | All | Use this option when the backup is from the same version of the application and your data size is not large (i.e. just delete the data and then run the restore.)
+
+Note that not all schema differences can be handled automatically - we recommend testing that you can restore backups from previous versions regularly if you are in transition or ongoing development.
 
 The recommended setting is *Delete existing table data using metadata*.
