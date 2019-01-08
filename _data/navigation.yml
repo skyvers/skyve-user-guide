@@ -7,7 +7,11 @@ docs:
         url: /communication-templates/
       - title: "Content Search"
         url: /content-search/
-      - title: "Data Maintenance"
-        url: /data-maintenance/
       - title: "Users"
         url: /users/
+  - title: Data Maintenance
+    children:       
+      - title: "Data Maintenance"
+        url: /data-maintenance/
+      - title: "Backup and restore"
+        url: /backup-restore/
