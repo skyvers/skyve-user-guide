@@ -12,6 +12,8 @@ sidebar:
 
 *NOTE* that Skyve backup and restore is an application wide function - across all customer data segments. If your application is a multi-tenant SaaS application, you should consider carefully both backup and restore options.
 
+![Backup and restore](./../assets/images/backup-restore/backup-tab.png "Backup and restore")
+
 ### Taking a backup
 
 To take a backup, the user must have the *DevOps* role in the admin module.
