@@ -143,7 +143,7 @@ The recommended setting is *Error*.
 
 If this option is set and a *Domain Exception* occurs during restore (check the restore Job log via the admin *Jobs* menu), it may be that the backup was taken from an instance with orphaned content Ids.
 
-In this case we recommend the following resolving the data issues in the original system (where the backup was taken from), and take another backup - then restore this backup.
+In this case we recommend the resolving the data issues in the original system (where the backup was taken from), and take another backup - then restore this backup.
 
 Alternatively, change the option to *Clear Orphaned Content IDs* and restore the backup.
 
