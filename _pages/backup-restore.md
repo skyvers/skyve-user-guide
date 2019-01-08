@@ -12,7 +12,7 @@ sidebar:
 
 Skyve provides a powerful backup and restore facility that offers a unique range of features.
 
-![Backup and restore](./../_pages/backup-restore/backup-tab.png "Backup and restore")
+![Backup and restore](./../assets/images/backup-restore/backup-tab.png "Backup and restore")
 
 Feature | Description
 --------|------------
@@ -45,7 +45,7 @@ To schedule the job:
 
 An example configuration is shown for daily backups.
 
-![Daily backup schedule](./../_pages/backup-restore/daily-backup-schedule.png "Daily backup schedule")
+![Daily backup schedule](./../assets/images/backup-restore/daily-backup-schedule.png "Daily backup schedule")
 
 ### Cyclic retention
 
@@ -62,13 +62,13 @@ To access the cyclic retention settings:
 4. Switch to the *Backups* tab
 5. The cyclic retention settings are located at the top of the tab as shown below.
 
-![Cyclic backup retention](./../_pages/backup-restore/cyclic-period-schedule.png "Cyclic backup retention")
+![Cyclic backup retention](./../assets/images/backup-restore/cyclic-period-schedule.png "Cyclic backup retention")
 
 ### Restoring a Skyve backup
 
 Skyve offers a number of *Pre-Process* options to handle cases where the application domain model may have progresses since the backup was taken - this situation is not typically handled by other platforms. 
 
-![Restore options](./../_pages/backup-restore/restore-options.png "Restore options")
+![Restore options](./../assets/images/backup-restore/restore-options.png "Restore options")
 
 #### Content Option
 
