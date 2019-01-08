@@ -98,7 +98,7 @@ To restore a Skyve backup:
     
 3. Navigate to the Admin module, and select the *Data Maintenance* menu item
 4. Switch to the *Backups* tab
-    a. We recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
+    1. We recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
 5. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the backup area - inside the application *content* folder)
 6. Refresh the backup list to check the upload was successful
 7. Select the uploaded backup in the list
@@ -113,13 +113,13 @@ If the *Restore* fails - it is likely that previous user credentials will have b
 1. Review the *Pre-Process* method and check whether you have selected the correct option. 
 2. Check if user data has been deleted, and if so, create a user with *DevOps* role before logging out.
 3. If you missed step 2 and you need to recover and can't log in, do the following:
-    a. delete the application database and recreate an empty database to match the settings in your `datasource.xml`
-    b. change the `environment` setting in the application `.json` file to a non-null value - e.g. `"recovery"`
-    c. set a bootstrap user in the application `.json` file
-    d. restart the wildfly service or redeploy the application 
-    e. log in and resolve the restore or restore the backup you took in step 4.a. above
-    f. once the situation is resolved, revert the `environment` and `bootstrap` settings in the application `.json` file
-    g. restart the wildfly service or redeploy the application
+    1. delete the application database and recreate an empty database to match the settings in your `datasource.xml`
+    2. change the `environment` setting in the application `.json` file to a non-null value - e.g. `"recovery"`
+    3. set a bootstrap user in the application `.json` file
+    4. restart the wildfly service or redeploy the application 
+    5. log in and resolve the restore or restore the backup you took in step 4.i. above
+    6. once the situation is resolved, revert the `environment` and `bootstrap` settings in the application `.json` file
+    7. restart the wildfly service or redeploy the application
 
 #### Content Option
 
