@@ -10,17 +10,6 @@ sidebar:
 
 ## Backup and restore
 
-Skyve provides a powerful backup and restore facility that offers a unique range of features.
-
-![Backup and restore](./../assets/images/backup-restore/backup-tab.png "Backup and restore")
-
-Feature | Description
---------|------------
-*platform independent* | e.g. backups taken on Windows systems can be restored to Linux systems and vice versa  
-*database independent* | e.g. backups taken from a system using one database provider (e.g. MS SQL Server) can be restored to systems using another provider (e.g. Oracle, H2 or MySQL) and vice versa
-*includes structured and non-structured data* | backups include both SQL/relational/structured database data as well as non-structured/non-sql content items (note that structured and non-structured data are not necessarily guaranteed to be synchronised)
-*handles schema 'drift'* | Skyve offers a range of restore *Pre-Process* options to handle cases where a backup was taken from an application with *version x* domain model or schema and is restored to an application running *version y* and vice versa
-
 *NOTE* that Skyve backup and restore is an application wide function - across all customer data segments. If your application is a multi-tenant SaaS application, you should consider carefully both backup and restore options.
 
 ### Taking a backup
@@ -168,7 +157,9 @@ To perform indexing after the restore is complete, use the *Reindex* action on t
 
 #### Restore Pre-Process
 
-To handle situations where there is a mismatch between the domain/schema of the backup and the system being restored, Skyve provides a number of *Pre-Process* options.
+For most situations, we recommended using the setting *Delete existing table data using metadata*.
+
+However, to handle situations where there is a mismatch between the domain/schema of the backup and the system being restored, Skyve provides a number of *Pre-Process* options.
 
 To provide more options for recovery and resolving of schema mismatches, the Skyve backup format includes sql scripts to create (create.sql) and delete tables (delete.sql) for the schema of the backup. 
 
@@ -188,4 +179,3 @@ Option | Availability | Description
 Note that not all schema differences can be handled automatically - we recommend testing that you can restore backups from previous versions regularly if you are in transition or ongoing development.
 
 The recommended setting is *Delete existing table data using metadata*.
-
