@@ -23,7 +23,24 @@ Feature | Description
 
 *NOTE* that Skyve backup and restore is an application wide function - across all customer data segments. If your application is a multi-tenant SaaS application, you should consider carefully both backup and restore options.
 
-### Scheduling backups
+### Taking a backup
+
+To take a backup, the user must have the *DevOps* role in the admin module.
+
+To take the backup:
+
+1. Login with a user which has the `DevOps` role
+2. From the top right hand corner, switch to power user/desktop mode if not already in there
+
+    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
+    
+3. Navigate to the Admin module, and select the *Data Maintenance* menu item
+4. Switch to the *Backups* tab
+5. Press the *Backup* button (bottom RHS of the view) 
+6. Once the backup is complete, refresh the *Backups* list to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
+7. If you wish to download the backup, select the backup from the list and press *Download Backup*
+
+### Scheduling regular backups
 
 To schedule backups the user must have the *JobMaintainer* role in the admin module.
 
@@ -38,7 +55,7 @@ To schedule the job:
 4. Switch to the *Schedule* tab
 5. Click the `+` symbol to create a new schedule
 6. Select *admin - Scheduled Backup all data and content* as the *Job To Run*
-7. Select an appropriately credentialled user as the *Run As* user
+7. Select the appropriate user as the *Run As* user
 8. Select the required frequency by specifying the minutes, hours, days, months and/or weekdays and a date range (if required)
 9. Click `Save` to save your schedule, or press `OK` to save and return to the schedule list.
 
@@ -46,7 +63,7 @@ An example configuration is shown for daily backups.
 
 ![Daily backup schedule](./../assets/images/backup-restore/daily-backup-schedule.png "Daily backup schedule")
 
-### Cyclic retention
+### Cyclic retention settings
 
 The Skyve platform includes cyclic retention settings to allow you to control how many backups are kept.
 
@@ -69,6 +86,40 @@ To access the cyclic retention settings:
 Skyve offers a number of *Pre-Process* options to handle cases where the application domain model may have progresses since the backup was taken - this situation is not typically handled by other platforms. 
 
 ![Restore options](./../assets/images/backup-restore/restore-options.png "Restore options")
+
+*NOTE We recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.*
+
+To restore a Skyve backup:
+
+1. Login with a user which has the `DevOps` role
+2. From the top right hand corner, switch to power user/desktop mode if not already in there
+
+    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
+    
+3. Navigate to the Admin module, and select the *Data Maintenance* menu item
+4. Switch to the *Backups* tab
+    a. We recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
+5. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the backup area - inside the application *content* folder)
+6. Refresh the backup list to check the upload was successful
+7. Select the uploaded backup in the list
+8. Select the appropriate *Content Option*, *Indexing Option* and *Pre-Process* (all explained below)
+9. Press the *Restore* button (bottom RHS of the view) 
+10. The restore process is run as a Skyve *Job* and the progress and completion of the restore can be reviewed from the admin *Jobs* menu
+
+*WARNING*: Wait until the *Restore* process completes before taking any other actions. While the *Restore* process is in progress, data entry or other application activities may lead to unexpected results.
+
+If the *Restore* fails - it is likely that previous user credentials will have been deleted by the restore and you may need to recover. 
+
+1. Review the *Pre-Process* method and check whether you have selected the correct option. 
+2. Check if user data has been deleted, and if so, create a user with *DevOps* role before logging out.
+3. If you missed step 2 and you need to recover and can't log in, do the following:
+    a. delete the application database and recreate an empty database to match the settings in your `datasource.xml`
+    b. change the `environment` setting in the application `.json` file to a non-null value - e.g. `"recovery"`
+    c. set a bootstrap user in the application `.json` file
+    d. restart the wildfly service or redeploy the application 
+    e. log in and resolve the restore or restore the backup you took in step 4.a. above
+    f. once the situation is resolved, revert the `environment` and `bootstrap` settings in the application `.json` file
+    g. restart the wildfly service or redeploy the application
 
 #### Content Option
 
@@ -119,7 +170,7 @@ Option | Availability | Description
 -------|--------------|-------------
 *None* | All | Use this option when you've created your database from scratch (or with the bootstrap) and Skyve has created all database objects. You know the backup is from the same version and the schema is synchronised (matches the metadata). 
 *Drop tables using metadata & recreate tables from backup create.sql* | Single tenant | Use this option when your backup is from a different version of the application, you want the schema to be dropped (the schema matches the metadata) using the system metadata deployed, but you need the schema to look like it did when the backup was taken. (Part of the restore post-process is to sync the schema and reindex content.)
-*Drop tables using backup drop.sql & recreate tables from backup create.sql* | Single tenant | Use this option when your schema matches the application version of the backup (maybe your previous attempt to restore failed). You cant drop the schema without stopping the server and if you do that, you can't log in any more without restoring. Since the backup/restore only looks after tables under Skyve control, it could be that extra tables have constraints that you need to drop or other issues that you only find after trying to restore.
+*Drop tables using backup drop.sql & recreate tables from backup create.sql* | Single tenant | Use this option when your schema matches the application version of the backup (maybe your previous attempt to restore failed). You can't drop the schema without stopping the server and if you do that, you can't log in any more without restoring. Since the backup/restore only looks after tables under Skyve control, it could be that extra tables have constraints that you need to drop or other issues that you only find after trying to restore.
 *Drop tables using metadata & recreate tables from metadata* | Single tenant | Use this option when you know the backup is from the same version of the application. You have a large amount of data that you want to delete and the quickest way is drop and recreate the schema.
 *Drop tables using backup drop.sql & recreate tables from metadata* | Single tenant | Use this option when you've tried a restore before and your database is now in the shape of the backup application version.
 *Create tables from backup* | Single tenant | Use this option when you've created a empty schema (manually or scripted).
@@ -129,3 +180,4 @@ Option | Availability | Description
 Note that not all schema differences can be handled automatically - we recommend testing that you can restore backups from previous versions regularly if you are in transition or ongoing development.
 
 The recommended setting is *Delete existing table data using metadata*.
+
