@@ -9,7 +9,7 @@ docs:
         url: /content-search/
       - title: "Users"
         url: /users/
-      - title: "Data Maintenance"
+      - title: "Import and export"
         url: /data-maintenance/
       - title: "Backup and restore"
         url: /backup-restore/

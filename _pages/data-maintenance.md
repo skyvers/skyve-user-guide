@@ -1,5 +1,5 @@
 ---
-title: "Data Maintenance"
+title: "Import and export"
 permalink: /data-maintenance/
 excerpt: "Import and Exporting data within a Skyve application."
 toc: true
@@ -7,7 +7,7 @@ sidebar:
   title: "Index"
   nav: docs
 ---
-### Export/Import
+### Import and Export
 
 #### Bizport
 

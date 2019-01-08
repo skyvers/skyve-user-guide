@@ -42,9 +42,11 @@ To take the backup:
 
 ### Scheduling regular backups
 
+Skyve has the capability of running a regular backup schedule, however this is not enabled by default.
+
 To schedule backups the user must have the *JobMaintainer* role in the admin module.
 
-To schedule the job:
+To schedule the backup job:
 
 1. Login with a user which has the `JobMaintainer` role
 2. From the top right hand corner, switch to power user/desktop mode if not already in there
@@ -65,7 +67,7 @@ An example configuration is shown for daily backups.
 
 ### Cyclic retention settings
 
-The Skyve platform includes cyclic retention settings to allow you to control how many backups are kept.
+The Skyve platform includes cyclic retention settings to allow you to control how many backups are kept as part of the regular schedule.
 
 To access the cyclic retention settings:
 
@@ -83,7 +85,7 @@ To access the cyclic retention settings:
 
 ### Restoring a Skyve backup
 
-Skyve offers a number of *Pre-Process* options to handle cases where the application domain model may have progresses since the backup was taken - this situation is not typically handled by other platforms. 
+Skyve offers a number of *Pre-Process* options to handle cases where the application domain model may have progressed since the backup was taken - this situation is not typically handled by other platforms. 
 
 ![Restore options](./../assets/images/backup-restore/restore-options.png "Restore options")
 
@@ -98,7 +100,7 @@ To restore a Skyve backup:
     
 3. Navigate to the Admin module, and select the *Data Maintenance* menu item
 4. Switch to the *Backups* tab
-    1. We recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
+    1. If restoring from an application which may have a different version of the application, we recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
 5. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the backup area - inside the application *content* folder)
 6. Refresh the backup list to check the upload was successful
 7. Select the uploaded backup in the list
@@ -133,11 +135,17 @@ In this situation, the options provide are as follows:
 
 Option | Description
 -------|-----------
-Clear Orphaned Content IDs | With this option selected, the restore will clear any orphaned content IDs leaving the associated `content` type attributes `null`. 
-Save Orphaned Content IDs | With this option selected, the restore will preserve orphaned content IDs, which may be useful if an attempt will alter be made to reunite content items with the structure data store.
-Error | (*Recommended*) With this options set, if orphaned content items are discovered during the restore, the restore will fail (error) and roll-back. 
+*Clear Orphaned Content IDs* | With this option selected, the restore will clear any orphaned content IDs leaving the associated `content` type attributes `null`. 
+*Save Orphaned Content IDs* | With this option selected, the restore will preserve orphaned content IDs, which may be useful if an attempt will alter be made to reunite content items with the structure data store.
+*Error* | (*Recommended*) With this options set, if orphaned content items are discovered during the restore, the restore will fail (error) and roll-back. 
 
 The recommended setting is *Error*.
+
+If this option is set and a *Domain Exception* occurs during restore (check the restore Job log via the admin *Jobs* menu), it may be that the backup was taken from an instance with orphaned content Ids.
+
+In this case we recommend the following resolving the data issues in the original system (where the backup was taken from), and take another backup - then restore this backup.
+
+Alternatively, change the option to *Clear Orphaned Content IDs* and restore the backup.
 
 #### Indexing Option
 
