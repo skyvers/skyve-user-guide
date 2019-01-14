@@ -11,7 +11,7 @@ sidebar:
 
 User management within Skyve applications is accessed from the Admin -> Security Admin -> Users menu. This allows new users to be added, existing users to be marked inactive or deteled, and user permissions to be updated.
 
-### Adding a group
+### Security groups
 
 A group is a combination of module-specific roles typically combined to represent a user access profile related to a business access profile.
 
@@ -26,7 +26,7 @@ Role | Explanation | Description
 *Anonymous* |  | Access anonymous (not logged in) public features
 *AppUser | The App User role is intended for retail and public users interacting through the "front office". These users are assumed to operate within their own scope and have only visibility to their own data. App Users can create their own contacts, and change their own passwords. | Manage own contact details and password
 *AuditManager* |  | Manage the activity audit log
-*BasicUser * | | The intention of Basic User role is to provide basic capability to back-office users. The role is for a typical office situation where users collaborate within the "Customer" scope on key application areas. For example, shared contact management, common document number serials and the ability to use Skyve's basic personal efficiency and automation capabilities, Tags, Snapshots, Communication and view dashboards. | General access to the administration module
+*BasicUser * | The intention of Basic User role is to provide basic capability to back-office users. The role is for a typical office situation where users collaborate within the "Customer" scope on key application areas. For example, shared contact management, common document number serials and the ability to use Skyve's basic personal efficiency and automation capabilities, Tags, Snapshots, Communication and view dashboards. | General access to the administration module
 *ContactManager* | Allows atomic control over management of, and interaction with, contacts. | Manage contact details and interactions
 *ContactViewer* | Allows atomic control over visibility of contacts. | View-only access to contact details
 *DevOps* | | Generate Skyve designs and metadata and administer technical aspects of the Skyve runtime
@@ -38,9 +38,21 @@ Groups can be further combined on a per user basis and user creation provides fo
 
 Groups can also be combined for customer-specific combinations, however these combinations are set at design-time by the developer. For more information see the <a href="https://skyvers.github.io/skyve-dev-guide/customers/#customer-groups">developer guide</a>. 
 
+### Adding a new group
+
+1. Login with a user which has the `SecurityAdministrator` role
+2. Navigate to the Admin module, and select _Groups_ under Security Admin
+3. From the user list, click the `+` button to open the new user view
+
+![Adding a new group](./../assets/images/users/create-new-group.png "Adding a new group")
+
+4. Add the desired combination of roles to the group by clicking the `+` button above the _Roles_ collection
+
+![Adding group roles](./../assets/images/users/adding-group-roles.png "Adding group roles")
+
 ### Adding a new User
 
-_Prerequisites:_ You have at least one group created for user permissions.
+_Prerequisites:_ You have at least one group created for user permissions (see above).
 
 1. Login with a user which has the `SecurityAdministrator` role
 2. Navigate to the Admin module, and select _Users_ under Security Admin
@@ -66,13 +78,22 @@ To have the system send an invitation email to one or multiple new users, you ca
 _Prerequisites:_ 
 
 * Your application has its SMPT settings configured to enable sending email
-* You have at least one group created for user permissions
+* You have at least one group created for user permissions (see above)
 
 1. Login with a user which has the `SecurityAdministrator` role
 2. Navigate to the Admin module, and select `Users` under Security Admin
 3. Select the _Invite Users_ tab
 4. From the list of Groups, assign any group permissions new users will have after they are invited by selecting the group(s) and clicking the right arrow (`>`)
 5. Enter a comma or semicolon separated list of email addresses to be sent invitations into the text area below
-6. Click the _Invite Users_ button
 
 ![Bulk user creation](./../assets/images/users/bulk-user-creation.png "Bulk user creation")
+
+If you have email configured:
+- press the button to invite users.
+
+This will initiate a Skyve Job (reviewable from the Admin->Jobs menu) to create each new user record and send each user a *password reset token*.
+
+If you have not yet configured email:
+- use the *Create users without email* button and advise the users another way. 
+
+This will initiate a Skyve Job to create the new user records, but without the email. When users access the Skyve application log in page, they can take advantage of the *password reset* function without a *password reset token*.
