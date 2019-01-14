@@ -9,7 +9,7 @@ sidebar:
 ---
 ## User Management
 
-User management within Skyve applications is accessed from the Admin -> Security Admin -> Users menu. This allows new users to be added, existing users to be marked inactive or deteled, and user permissions to be updated.
+User management within Skyve applications is accessed from the Admin -> Security Admin -> Users menu. This allows new users to be added, existing users to be marked inactive or deleted, and user permissions to be updated.
 
 ### Security groups
 
