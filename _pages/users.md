@@ -24,9 +24,9 @@ The roles configured by default for the Skyve admin module are as follows:
 Role | Explanation | Description
 ---|---|---
 *Anonymous* |  | Access anonymous (not logged in) public features
-*AppUser | The App User role is intended for retail and public users interacting through the "front office". These users are assumed to operate within their own scope and have only visibility to their own data. App Users can create their own contacts, and change their own passwords. | Manage own contact details and password
+*AppUser* | The App User role is intended for retail and public users interacting through the "front office". These users are assumed to operate within their own scope and have only visibility to their own data. App Users can create their own contacts, and change their own passwords. | Manage own contact details and password
 *AuditManager* |  | Manage the activity audit log
-*BasicUser * | The intention of Basic User role is to provide basic capability to back-office users. The role is for a typical office situation where users collaborate within the "Customer" scope on key application areas. For example, shared contact management, common document number serials and the ability to use Skyve's basic personal efficiency and automation capabilities, Tags, Snapshots, Communication and view dashboards. | General access to the administration module
+*BasicUser* | The intention of Basic User role is to provide basic capability to back-office users. The role is for a typical office situation where users collaborate within the "Customer" scope on key application areas. For example, shared contact management, common document number serials and the ability to use Skyve's basic personal efficiency and automation capabilities, Tags, Snapshots, Communication and view dashboards. | General access to the administration module
 *ContactManager* | Allows atomic control over management of, and interaction with, contacts. | Manage contact details and interactions
 *ContactViewer* | Allows atomic control over visibility of contacts. | View-only access to contact details
 *DevOps* | | Generate Skyve designs and metadata and administer technical aspects of the Skyve runtime
