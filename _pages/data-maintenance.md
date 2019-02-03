@@ -7,15 +7,16 @@ sidebar:
   title: "Index"
   nav: docs
 ---
-### Import and Export
 
-#### Bizport
+Skyve comes with a few different options for bulk importing and exporting of data out of the box. Some of these options are available in the Admin module. To access those described below, navigate to Admin -> DevOps -> Data Maintenance.
+
+## Bizport
 
 Bizport is a powerful feature to allow sophisticated bulk data manipulation and offline data maintenance. If existing data is exported, the internal UUIDs will be exported in an Excel workbook, in the bizId column and also where references between records exist.
 
 On import, if the bizId of the row of data is recognised by the system, the system interprets this as an attempt to update the data row. If the UUID is not recognised, the system assumes that the value in the bizId is actually a business key which will need to be replaced with a UUID to guarantee uniqueness.
 
-##### Export Data
+### Export Data
 
 To use Bizport to export data:
 
@@ -26,7 +27,7 @@ To use Bizport to export data:
 5. Click `Export Data`
 6. Your browser will download the data as a Microsoft Excel file
 
-##### Import Data
+### Import Data
 
 To use Bizport to bulk import new data into an application, first follow the instructions to Export Data so that you have a spreadsheet in the correct format
 with the expected columns and tabs defined.
@@ -44,11 +45,11 @@ For new data, ID values for references between sheets need to be consistent for 
 8. Click `Upload`
 9. You will get a message that the import completed successfully if everything works, or the Problems table will highlight any issues if the import fails 
 
-#### Quick Import/Export
+## Quick Import/Export
 
 While Bizport allows import and export of complex relationships, an simpler option to bulk load data into or out of Skyve is to use the Quick Import/Export option.
 
-##### Export Data
+### Export Data
 
 To export existing data from a Skyve application using the Quick Import/Export function:
 
@@ -62,7 +63,7 @@ To export existing data from a Skyve application using the Quick Import/Export f
 8. Your browser will download the data as a Microsoft Excel file
 9. You can either Save this configuration to re-use it again, or click Cancel
 
-##### Import Data
+### Import Data
 
 To import new data into a Skyve application using the Quick Import/Export function:
 

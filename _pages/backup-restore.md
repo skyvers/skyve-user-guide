@@ -8,13 +8,11 @@ sidebar:
   nav: docs
 ---
 
-## Backup and restore
-
 *NOTE* that Skyve backup and restore is an application wide function - across all customer data segments. If your application is a multi-tenant SaaS application, you should consider carefully both backup and restore options.
 
 ![Backup and restore](./../assets/images/backup-restore/backup-tab.png "Backup and restore")
 
-### Taking a backup
+## Taking a backup
 
 To take a backup, the user must have the *DevOps* role in the admin module.
 
@@ -31,7 +29,7 @@ To take the backup:
 6. Once the backup is complete, refresh the *Backups* list to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
 7. If you wish to download the backup, select the backup from the list and press *Download Backup*
 
-### Scheduling regular backups
+## Scheduling regular backups
 
 Skyve has the capability of running a regular backup schedule, however this is not enabled by default.
 
@@ -56,7 +54,7 @@ An example configuration is shown for daily backups.
 
 ![Daily backup schedule](./../assets/images/backup-restore/daily-backup-schedule.png "Daily backup schedule")
 
-### Cyclic retention settings
+## Cyclic retention settings
 
 The Skyve platform includes cyclic retention settings to allow you to control how many backups are kept as part of the regular schedule.
 
@@ -74,7 +72,7 @@ To access the cyclic retention settings:
 
 ![Cyclic backup retention](./../assets/images/backup-restore/cyclic-period-schedule.png "Cyclic backup retention")
 
-### Restoring a Skyve backup
+## Restoring a Skyve backup
 
 Skyve offers a number of *Pre-Process* options to handle cases where the application domain model may have progressed since the backup was taken - this situation is not typically handled by other platforms. 
 
@@ -114,7 +112,7 @@ If the *Restore* fails - it is likely that previous user credentials will have b
     6. once the situation is resolved, revert the `environment` and `bootstrap` settings in the application `.json` file
     7. restart the wildfly service or redeploy the application
 
-#### Content Option
+### Content Option
 
 The *Content Option* allows control over whether content items which may have been orphaned in the backup are restored.
 
@@ -138,7 +136,7 @@ In this case we recommend the resolving the data issues in the original system (
 
 Alternatively, change the option to *Clear Orphaned Content IDs* and restore the backup.
 
-#### Indexing Option
+### Indexing Option
 
 Skyve maintains an index to long text items and content items in a consolidated index that supports federated (i.e system-wide) searching (See [Content Search](./../_pages/content-search.md))
 
@@ -157,7 +155,7 @@ The recommended setting is *Both*.
 
 To perform indexing after the restore is complete, use the *Reindex* action on the *Content* tab.
 
-#### Restore Pre-Process
+### Restore Pre-Process
 
 For most situations, we recommended using the setting *Delete existing table data using metadata*.
 
