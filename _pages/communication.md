@@ -7,9 +7,10 @@ sidebar:
   title: "Index"
   nav: docs
 ---
-### Create a new Communication
 
-#### Sending a new Email
+Communications within a Skyve application is where ad-hoc and system email messages are created and edited. New email messages can be created and use data from within the system as the recipient and/or the body of the email. System messages can also be maintained here if notifications need to be updated over time, for example signatures or contact details. 
+
+## Create and send a new Communication
 
 _Prerequisites:_ Your application has its SMPT settings configured to enable sending email.
 
@@ -36,7 +37,7 @@ The following example will walk through using the built in Communication feature
 
     ![Tagged contacts]({{ site.url }}{{ site.baseurl }}/assets/images/communication/comm-3.png)
 
-10. From the menu, select Communication->`Contacts`
+10. From the admin menu, select Communication->`Communications`
 11. Click the `+` symbol to create a new Communication
 12. Enter `test email` into Description
 13. Select `Admin` as the Module from the drop-down
@@ -58,3 +59,16 @@ The following example will walk through using the built in Communication feature
 21. Attachments can be added from the `Options` tab, but for now return to the `Manage` tab
 22. Click `Send Now`
 23. A new background job will be initiated to send your email immediately in the background. The results of the job can be checked from the `Jobs` screen.
+
+## Editing an existing Communication
+
+When you have existing Commincations in your application and wish to make changes to the content of the email.
+
+_Prerequisites:_ Your application has at least one had-hoc or system communication defined
+
+1. Login with a user which has the `ContactManager` or `SecurityAdministrator` role
+2. From the admin menu, select Communication->`Communications`
+3. Open the communication you wish to edit
+4. Select the `Contents` tab
+5. Edit the subject and/or the body
+6. Click `OK` to save the modifications 
