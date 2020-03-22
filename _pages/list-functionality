@@ -1,5 +1,10 @@
 ### List Grids 
 
+To get the most functionality out of list grids, switch into power user mode, SmartClient:
+From the top right hand corner, switch to power user mode if not already in there
+
+![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
+
 #### Column Headings
 
 Column headings control sorting, you can do simple sorting by clicking
