@@ -1,11 +1,20 @@
-### List Grids 
+---
+title: "List Functionality"
+permalink: /lists/
+excerpt: "Working with List Grids within Skyve applications"
+toc: true
+sidebar:
+  title: "Index"
+  nav: docs
+---
+## List Grids 
 
 To get the most functionality out of list grids in Skyve, switch into power user 
 mode (from the top right hand corner, switch to power user mode if not already in there).
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
-#### Column Headings
+### Column Headings
 
 Column headings control sorting, you can do simple sorting by clicking
 on the column heading. Clicking once will sort the list by ascending order, 
@@ -31,7 +40,7 @@ information in that column. To resize all columns, click the `Auto Fit All Colum
 button. To gain a little more room to view your query, you can click on the 
 `Expand/Shrink Menu` button to minimise the side-menu.
 
-#### Filter Line
+### Filter Line
 
 The filter line has the ability to filter the list based on `like` or `contains` 
 searches. Clicking the `Use Advanced Filtering` displays the `Advanced Filtering` 
@@ -40,7 +49,7 @@ and `Inline`. Each perform the same use, but you may find one style easier to us
 than the others. Click the `Add` button to add new critera to filter by, then 
 select the filter operator and enter the data you wish to find. 
 
-#### Export Data
+### Export Data
 
 To Export Data you can click on the `Export Table Data` button, the key areas of 
 the wizard are; the report format, page formatting, margins and column selector. 
@@ -48,7 +57,7 @@ Your file will be generated and will appear in your downloads. To change the
 data shown in the export file, drag and drop between the two columns. If the report
 is formatted, you can change the widths on the right hand side of the column.
 
-#### Flags
+### Flags
 
 Flags are a useful tool for setting reminders or alerting others of something of 
 note. To set a flag, click in the `Flag` column next to the record, then enter 
@@ -57,13 +66,13 @@ when hovered over will display the message stored. To clear the flag, click the 
 and click `Clear`. If you wish to search by contents in a flag, they can be filtered
 just like any other field. 
 
-#### Summary Line
+### Summary Line
 
 The Summary Line  in the bottom left corner can be applied to enact a number of summary functions on the data. 
 There are functions to find the `Count` of the data, the average, the minimum and 
 maximum, and the sum of any field.
 
-#### Tags
+### Tags
 
 If you have a set of filters that you wish to reuse, you can use `Tags`. Once 
 you have the filters set, click the `Tag` drop-down and click `New Tag`, enter the 
