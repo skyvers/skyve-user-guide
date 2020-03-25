@@ -61,4 +61,3 @@ To switch interfaces, click the switch icon from the top right hand corner. In _
 In _power user_ mode, the same switch icon is available from the toolbar at the top of the application.
 
 _Note_: the switch mode button may not always be available depending on your application and if it suppports both interfaces.
-
