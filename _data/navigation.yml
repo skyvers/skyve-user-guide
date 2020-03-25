@@ -8,7 +8,7 @@ docs:
       - title: "Content Search"
         url: /content-search/
       - title: "List Functionality"
-        url: /list-functionality/
+        url: /lists/
       - title: "Users"
         url: /users/
       - title: "Import and export"

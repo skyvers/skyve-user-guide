@@ -1,7 +1,7 @@
 ### List Grids 
 
-To get the most functionality out of list grids, switch into power user mode, SmartClient:
-From the top right hand corner, switch to power user mode if not already in there
+To get the most functionality out of list grids in Skyve, switch into power user 
+mode (from the top right hand corner, switch to power user mode if not already in there).
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
@@ -49,6 +49,7 @@ data shown in the export file, drag and drop between the two columns. If the rep
 is formatted, you can change the widths on the right hand side of the column.
 
 #### Flags
+
 Flags are a useful tool for setting reminders or alerting others of something of 
 note. To set a flag, click in the `Flag` column next to the record, then enter 
 the text you wish to show and click `Flag`. The flag icon will show in the list and 
@@ -57,11 +58,13 @@ and click `Clear`. If you wish to search by contents in a flag, they can be filt
 just like any other field. 
 
 #### Summary Line
+
 The Summary Line  in the bottom left corner can be applied to enact a number of summary functions on the data. 
 There are functions to find the `Count` of the data, the average, the minimum and 
 maximum, and the sum of any field.
 
 #### Tags
+
 If you have a set of filters that you wish to reuse, you can use `Tags`. Once 
 you have the filters set, click the `Tag` drop-down and click `New Tag`, enter the 
 name of your tag and click `OK`. Click the drop-down again and hover over your 
