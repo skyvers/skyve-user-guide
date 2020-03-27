@@ -16,7 +16,7 @@ mode (from the top right hand corner, switch to power user mode if not already i
 
 ### Column Headings
 
-![Column Headings](/images/ColumnHeading.PNG)
+![Column Headings]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ColumnHeading.PNG)
 
 Column headings control sorting, you can do simple sorting by clicking
 on the column heading. Clicking once will sort the list by ascending order, 
@@ -32,7 +32,7 @@ that you clicked to get to your current screen.
 
 ### List Tools
 
-![List Tools](/images/ListTools.PNG)
+![List Tools]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ListTools.PNG)
 
 To use a more complex sort, you can use the `Configure Sort` tool previously 
 mentioned. Click the drop down for any column heading and select `Configure Sort`.
@@ -48,7 +48,7 @@ button. To gain a little more room to view your query, you can click on the
 
 ### Filter Line
 
-![Filter Line](/images/FilterLine.PNG)
+![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/FilterLine.PNG)
 
 The filter line has the ability to filter the list based on `like` or `contains` 
 searches. Clicking the `Use Advanced Filtering` displays the `Advanced Filtering` 
@@ -75,6 +75,8 @@ and click `Clear`. If you wish to search by contents in a flag, they can be filt
 just like any other field. 
 
 ### Summary Line
+
+![Summary Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/SummaryLine.PNG)
 
 The Summary Line  in the bottom left corner can be applied to enact a number of summary functions on the data. 
 There are functions to find the `Count` of the data, the average, the minimum and 
