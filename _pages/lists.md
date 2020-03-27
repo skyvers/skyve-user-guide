@@ -16,6 +16,8 @@ mode (from the top right hand corner, switch to power user mode if not already i
 
 ### Column Headings
 
+![Column Headings](/images/ColumnHeading.PNG)
+
 Column headings control sorting, you can do simple sorting by clicking
 on the column heading. Clicking once will sort the list by ascending order, 
 each following click will then toggle between descending and ascending. By
@@ -27,6 +29,10 @@ by the column selected.
 If you wish to no longer have the list sorted, you can return the list to 
 the default configuration by clicking on the menu item on the left hand side
 that you clicked to get to your current screen.
+
+### List Tools
+
+![List Tools](/images/ListTools.PNG)
 
 To use a more complex sort, you can use the `Configure Sort` tool previously 
 mentioned. Click the drop down for any column heading and select `Configure Sort`.
@@ -41,6 +47,8 @@ button. To gain a little more room to view your query, you can click on the
 `Expand/Shrink Menu` button to minimise the side-menu.
 
 ### Filter Line
+
+![Filter Line](/images/FilterLine.PNG)
 
 The filter line has the ability to filter the list based on `like` or `contains` 
 searches. Clicking the `Use Advanced Filtering` displays the `Advanced Filtering` 
