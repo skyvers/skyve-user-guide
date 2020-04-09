@@ -11,6 +11,12 @@ sidebar:
 
 User management within Skyve applications is accessed from the Admin -> Security Admin -> Users menu. This allows new users to be added, existing users to be marked inactive or deleted, and user permissions to be updated.
 
+### Security Implementation
+
+In Skyve, security is implemented within Roles and Groups. Groups are used to combine roles into a defined collection of permissions which is useful for structuring Roles for multiple Users. Roles on the other hand allow for more control over an individual User's Roles within an application.
+
+Users may only have a single group assigned to them which covers their Roles to use the application, additional Roles can then be added to that User if it doesn't make sense to define a new Group.
+
 ### Security groups
 
 A group is a combination of module-specific roles typically combined to represent a user access profile related to a business access profile.
