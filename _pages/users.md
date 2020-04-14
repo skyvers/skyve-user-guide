@@ -11,6 +11,12 @@ sidebar:
 
 User management within Skyve applications is accessed from the Admin -> Security Admin -> Users menu. This allows new users to be added, existing users to be marked inactive or deleted, and user permissions to be updated.
 
+### Security Implementation
+
+In Skyve, security is implemented within Roles and Groups. Groups are used to combine roles into a defined collection of permissions which is useful for structuring Roles for multiple Users. Roles on the other hand allow for more control over an individual User's Roles within an application.
+
+Users can have multiple groups assigned to them which cover their Roles to use the application, additional Roles can then be added to that User if it doesn't make sense to define a new Group.
+
 ### Security groups
 
 A group is a combination of module-specific roles typically combined to represent a user access profile related to a business access profile.
@@ -97,3 +103,13 @@ If you have not yet configured email:
 - use the *Create users without email* button and advise the users another way. 
 
 This will initiate a Skyve Job to create the new user records, but without the email. When users access the Skyve application log in page, they can take advantage of the *password reset* function without a *password reset token*.
+
+### Adding a Group or Role to a User
+
+_Prerequisites:_ You have at least one user you wish to add permissions to
+
+1. Login with a user which has the `SecurityAdministrator` role
+2. Navigate to the Admin module, and select _Users_ under Security Admin
+3. Select and enter into the user you wish to add a Group or Role to
+4.1. If you wish to add a Group to a user, navigate to the `Groups` tab, click the group you wish to add and click the `>` button to add it to the Assigned roles
+4.2. If you wish to add a Role to a user, navigate to the `Roles` tab, click the `+` button, select the role you wish to add to the user then click 'Zoom Out'
