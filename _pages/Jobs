@@ -7,7 +7,7 @@ sidebar:
   title: "Index"
   nav: docs
 ---
-
+ 
 Jobs within a Skyve application is where system jobs are created and edited. New jobs can be created using the modules within the application. System jobs can also be maintained here if they need to be updated over time. 
 
 ## Scheduling a job
@@ -26,7 +26,7 @@ Jobs within a Skyve application is where system jobs are created and edited. New
 
 5.1. If the job is a one off, click 'Schedule Job for Now'
 
-6.1. Click back to 'Jobs' under the 'Admin' tab and check 'Completed Jobs' under the 'Actual' tab
+6.1. Click 'Cancel', then check 'Completed Jobs' under the 'Actual' tab
 
 5.2. If the job is recurring, enter the time you want the job to run, as well as the dates it should run 
 ![Jobs Dates](/images/Jobs5.PNG)
