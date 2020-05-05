@@ -15,4 +15,6 @@ docs:
         url: /data-maintenance/
       - title: "Backup and restore"
         url: /backup-restore/
+      - title: "Jobs"
+        url: /jobs/
         
