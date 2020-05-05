@@ -29,6 +29,9 @@ Jobs within a Skyve application is where system jobs are created and edited. New
 6.1. Click 'Cancel', then check 'Completed Jobs' under the 'Actual' tab
 
 5.2. If the job is recurring, enter the time you want the job to run, as well as the dates it should run 
+- If the job should run always, select the 'All' buttons to indicate that the job should run during every time or date period
+- If the job should run at chosen times/dates, select the 'Selected' button and click the times/dates that the job should run
+- A combination of these 'All' and 'Selected' times and dates can be utilised to gain the required job times
 ![Jobs Dates](/images/Jobs5.PNG)
 
 6.2(optional). A date range for the job to run can be applied at the bottom of the page
