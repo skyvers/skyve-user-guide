@@ -1,0 +1,37 @@
+---
+title: "Jobs"
+permalink: /jobs/
+excerpt: "Creating and configuring jobs within a Skyve application."
+toc: true
+sidebar:
+  title: "Index"
+  nav: docs
+---
+
+Jobs within a Skyve application is where system jobs are created and edited. New jobs can be created using the modules within the application. System jobs can also be maintained here if they need to be updated over time. 
+
+## Scheduling a job
+
+1. Under the 'Admin' module then click into 'Jobs'
+![Jobs Menu](/images/Jobs1.PNG)
+
+2. Navigate into the 'Schedule' tab
+![Jobs Schedule](/images/Jobs2.PNG)
+
+3. Click '+' to add a new job
+![Jobs Adding](/images/Jobs3.PNG)
+
+4. Enter the job to be run in 'Job To Run' and the user to run it as in 'Run As'
+![Jobs Run](/images/Jobs4.PNG)
+
+5.1. If the job is a one off, click 'Schedule Job for Now'
+
+6.1. Click back to 'Jobs' under the 'Admin' tab and check 'Completed Jobs' under the 'Actual' tab
+
+5.2. If the job is recurring, enter the time you want the job to run, as well as the dates it should run 
+![Jobs Dates](/images/Jobs5.PNG)
+
+6.2(optional). A date range for the job to run can be applied at the bottom of the page
+![Jobs Menu](/images/Jobs6.PNG)
+
+7.2. Click 'OK' to save and return
