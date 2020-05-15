@@ -8,11 +8,11 @@ sidebar:
   nav: docs
 ---
  
-Jobs within a Skyve application is where system jobs are created and edited. New jobs can be created using the modules within the application. System jobs can also be maintained here if they need to be updated over time. 
+Jobs within a Skyve application allow long running tasks (jobs) to be scheduled to run in the background. Jobs can be scheduled to be run once, or a schedule can be saved if they need to run repeatedly over time, e.g. a nightly backup job.
 
-## Scheduling a job
+## Scheduling a recurring job
 
-1. Under the 'Admin' module then click into 'Jobs'
+1. Under the 'Admin' module, click into 'Jobs'
 ![Jobs Menu](/images/Jobs1.PNG)
 
 2. Navigate into the 'Schedule' tab
@@ -24,17 +24,34 @@ Jobs within a Skyve application is where system jobs are created and edited. New
 4. Enter the job to be run in 'Job To Run' and the user to run it as in 'Run As'
 ![Jobs Run](/images/Jobs4.PNG)
 
-5.1. If the job is a one off, click 'Schedule Job for Now'
-
-6.1. Click 'Cancel', then check 'Completed Jobs' under the 'Actual' tab
-
-5.2. If the job is recurring, enter the time you want the job to run, as well as the dates it should run 
+5. Enter the time you want the job to run, as well as the days/dates it should run 
 - If the job should run always, select the 'All' buttons to indicate that the job should run during every time or date period
 - If the job should run at chosen times/dates, select the 'Selected' button and click the times/dates that the job should run
 - A combination of these 'All' and 'Selected' times and dates can be utilised to gain the required job times
 ![Jobs Dates](/images/Jobs5.PNG)
 
-6.2(optional). A date range for the job to run can be applied at the bottom of the page
+6 (optional). A date range for the job to run can be applied at the bottom of the page
 ![Jobs Menu](/images/Jobs6.PNG)
 
-7.2. Click 'OK' to save and return
+7. Click 'OK' to save and return
+
+
+## Scheduling a one-off job
+
+1. Under the 'Admin' module, click into 'Jobs'
+![Jobs Menu](/images/Jobs1.PNG)
+
+2. Navigate into the 'Schedule' tab
+![Jobs Schedule](/images/Jobs2.PNG)
+
+3. Click '+' to add a new job
+![Jobs Adding](/images/Jobs3.PNG)
+
+4. Enter the job to be run in 'Job To Run' and the user to run it as in 'Run As'
+![Jobs Run](/images/Jobs4.PNG)
+
+5. If the job is a one off, click 'Schedule Job for Now'
+
+6. Click 'Cancel', then check 'Completed Jobs' under the 'Actual' tab
+
+7. Click 'OK' to save and return
