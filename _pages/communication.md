@@ -70,5 +70,6 @@ _Prerequisites:_ Your application has at least one had-hoc or system communicati
 2. From the admin menu, select Communication->`Communications`
 3. Open the communication you wish to edit
 4. Select the `Contents` tab
-5. Edit the subject and/or the body
+5. Modify the `To` or `CC To` fields if you would like to change who receives the communication. This can be an expression.
+5. Modify the `Subject` and/or the `Body` with any desired changes. These can contain expressions.
 6. Click `OK` to save the modifications 
