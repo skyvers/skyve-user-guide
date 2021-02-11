@@ -54,30 +54,28 @@ While Bizport allows import and export of complex relationships, an simpler opti
 To export existing data from a Skyve application using the Quick Import/Export function:
 
 1. Login with a user which has the `DevOps` role
-2. Switch to power user mode if not already in there
-3. Navigate to the Admin module, and select `Data Maintenance`
-4. From the Export/Import tab, click the `+` button in the Quick Import/Export table
-5. Change the Mode to `Export Data`
-6. Select the Module and Document you wish to export in the Configure Options section
-7. Click the `Download Data` button
-8. Your browser will download the data as a Microsoft Excel file
-9. You can either Save this configuration to re-use it again, or click Cancel
+2. Navigate to the Admin module, and select `DevOps` -> `Data Maintenance`
+3. From the Import/Export tab, click the `+` button in the Quick Import/Export table
+4. Change the Mode to `Export Data`
+5. Select the Module and Document you wish to export in the Configure Options section
+6. Click the `Download Data` button
+7. Your browser will download the data as a Microsoft Excel file
+8. You can either Save this configuration to re-use it again, or click Cancel
 
 ### Import Data
 
 To import new data into a Skyve application using the Quick Import/Export function:
 
 1. Login with a user which has the `DevOps` role
-2. Switch to power user mode if not already in there
-3. Navigate to the Admin module, and select `Data Maintenance`
-4. From the Export/Import tab, click the `+` button in the Quick Import/Export table
-5. Leave the Mode as `Import Data`
-6. Select the destination Module and Document for the import in the Configure Options section
-7. Click `Upload Data`
-8. Click `Choose` and use the file browser to locate your import spreadsheet. You can use an export with the Template only option selected to create an import spreadsheet, or select another `.xlsx` file.
-9. Click `Upload`
-10. Click the `x` in the top right corner to close the upload dialog
-11. If the upload was successful, the Import Column table should be populated with the column headings from the spreadsheet.
-12. Modify any bindings in the Configure Import Column table to match the correct attributes of the destination Document
-13. Click `Import Data`
-14. You can either Save this configuration to re-use it again, or click Cancel
+2. Navigate to the Admin module, and select `DevOps` -> `Data Maintenance`
+3. From the Import/Export tab, click the `+` button in the Quick Import/Export table
+4. Leave the Mode as `Import Data`
+5. Select the destination Module and Document for the import in the Configure Options section
+6. Click `Upload file`
+7. Click `Choose` and use the file browser to locate your import spreadsheet. You can use an export with the Template only option selected to create an import spreadsheet, or select your own `.xlsx` file.
+8. Click `Upload`
+9. Click the `x` in the top right corner to close the upload dialog
+10. If the upload was successful, the Import Column table should be populated with the column headings from the spreadsheet.
+11. Modify any bindings in the Configure Import Column table to match the correct attributes of the destination Document
+12. Click `Import data from file` to load the data from the spreadsheet
+13. You can either Save this configuration to re-use it again, or click Cancel
