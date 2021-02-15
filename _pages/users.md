@@ -114,3 +114,5 @@ _Prerequisites:_ You have at least one user you wish to add permissions to
 4.
     1. If you wish to add a Group to a user, navigate to the `Groups` tab, click the group you wish to add and click the `>` button to add it to the Assigned collection
     2. If you wish to add a Role to a user, navigate to the `Roles` tab, click the `+` button in the `User Roles` table, select the role you wish to add to the user, then click 'Zoom Out'
+
+_Note: after changing permissions for a User, that user will need to log out and then log back in to apply the new permissions if they are already logged in._
