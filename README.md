@@ -12,7 +12,7 @@ sidebar:
   <img src="assets/images/skyve-logo.png" width="300" alt="Skyve logo" />
 </div>
 
-Welcome to the Sykve User Guide. Use the index on the left to navigate or search.
+Welcome to the Skyve User Guide. Use the index on the left to navigate or search.
 
 ## Basic Skyve Concepts
 
