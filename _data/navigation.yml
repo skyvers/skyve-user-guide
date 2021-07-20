@@ -17,6 +17,8 @@ docs:
         url: /backup-restore/
       - title: "Jobs"
         url: /jobs/
+  - title: Biz Hub support centre
+    children:
       - title: "Biz Hub support centre"
         url: /support-centre/
         
