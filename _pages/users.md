@@ -116,3 +116,16 @@ _Prerequisites:_ You have at least one user you wish to add permissions to
     2. If you wish to add a Role to a user, navigate to the `Roles` tab, click the `+` button in the `User Roles` table, select the role you wish to add to the user, then click 'Zoom Out'
 
 _Note: after changing permissions for a User, that user will need to log out and then log back in to apply the new permissions if they are already logged in._
+
+### Deactivating a User
+
+* It is best practice to set a user inactive rather than delete them as there may be existing references to the user. *
+* Setting a user inactive prevents them from accessing the system while ensuring references to them within the system are not broken. *
+
+_Prerequisites:_ You have at least one active user
+
+1. Login with a user which has the `SecurityAdministrator` role
+2. Navigate to the Admin module, and select _Users_ under Security Admin
+3. Zoom into the user you wish to deactivate
+4. Click _Inactive_ so that it is ticked
+5. Click _OK_
