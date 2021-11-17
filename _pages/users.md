@@ -119,8 +119,8 @@ _Note: after changing permissions for a User, that user will need to log out and
 
 ### Deactivating a User
 
-* It is best practice to set a user inactive rather than delete them as there may be existing references to the user. *
-* Setting a user inactive prevents them from accessing the system while ensuring references to them within the system are not broken. *
+* It is best practice to set a user inactive rather than delete them as there may be existing references to the user.
+* Setting a user inactive prevents them from accessing the system while ensuring references to them within the system are not broken.
 
 _Prerequisites:_ You have at least one active user
 
