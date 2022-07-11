@@ -9,10 +9,10 @@ sidebar:
 ---
 
 <div style="margin: 0 auto; text-align: center">
-  <img src="assets/images/skyve-logo.png" width="300" alt="Skyve logo" />
+  <img src="assets/images/skyve-logo.png" width="300" style="margin: 10 0;" alt="Skyve logo" />
 </div>
 
-Welcome to the Skyve User Guide. Use the index on the left to navigate or search.
+Welcome to the Skyve User Guide. Please use the index on the left to navigate, or begin a search.
 
 ## Basic Skyve Concepts
 

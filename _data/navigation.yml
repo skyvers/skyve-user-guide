@@ -7,6 +7,8 @@ docs:
         url: /communication-templates/
       - title: "Content Search"
         url: /content-search/
+      - title: "Configuration"
+        url: /configuration/
       - title: "Document Numbers"
         url: /document-numbers/
       - title: "List Functionality"
