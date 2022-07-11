@@ -5,10 +5,10 @@ docs:
         url: /communication/
       - title: "Communication Templates"
         url: /communication-templates/
-      - title: "Content Search"
-        url: /content-search/
       - title: "Configuration"
         url: /configuration/
+      - title: "Content Search"
+        url: /content-search/
       - title: "Document Numbers"
         url: /document-numbers/
       - title: "List Functionality"
