@@ -55,3 +55,8 @@ _Prerequisites_: Access to a SMTP server or email relay service (e.g. [Postmark]
 1. Ensure `Test Mode` is unchecked.
 1. If a `Test Mail Recipient` is set, all email will be sent to this address. Clear this to send to the intended recipient.
 1. Click `Save`
+1. To test that the entered configuration is working, select the `General` tab of the `Configuration` page
+1. In the `Test Email` section, enter your email address and a test subject and email body and click `Send Mail`
+1. Verify you received the email
+
+_Note_: To prevent issues with email being sent from your Skyve application being flagged as spam, ensure the `General` tab's `Password Reset` -> `Send/From Email Address` and the `Startup` tab's `Configuration` -> `Mail Settings` -> `Default Sender` match the of your SMPT server or that of your application.
