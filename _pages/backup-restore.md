@@ -19,15 +19,11 @@ To take a backup, the user must have the *DevOps* role in the admin module.
 To take the backup:
 
 1. Login with a user which has the `DevOps` role
-2. From the top right hand corner, switch to power user/desktop mode if not already in there
-
-    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
-    
-3. Navigate to the Admin module, and select the *Data Maintenance* menu item
-4. Switch to the *Backups* tab
-5. Press the *Backup* button (bottom RHS of the view) 
-6. Once the backup is complete, refresh the *Backups* list to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
-7. If you wish to download the backup, select the backup from the list and press *Download Backup*
+1. Navigate to the Admin module, and select the *Data Maintenance* menu item
+1. Switch to the *Backup/Restore* tab
+1. Press the *Backup* button (bottom RHS of the view) 
+1. Once the backup is complete, refresh the *Backups* list to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
+1. If you wish to download the backup, select the backup from the list and press *Download Backup*
 
 ## Scheduling regular backups
 
@@ -38,17 +34,13 @@ To schedule backups the user must have the *JobMaintainer* role in the admin mod
 To schedule the backup job:
 
 1. Login with a user which has the `JobMaintainer` role
-2. From the top right hand corner, switch to power user/desktop mode if not already in there
-
-    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
-    
-3. Navigate to the Admin module, and select the *Jobs* menu item
-4. Switch to the *Schedule* tab
-5. Click the `+` symbol to create a new schedule
-6. Select *admin - Scheduled Backup all data and content* as the *Job To Run*
-7. Select the appropriate user as the *Run As* user
-8. Select the required frequency by specifying the minutes, hours, days, months and/or weekdays and a date range (if required)
-9. Click `Save` to save your schedule, or press `OK` to save and return to the schedule list.
+1. Navigate to the Admin module, and select the *Jobs* menu item
+1. Switch to the *Schedule* tab
+1. Click the `+` symbol to create a new schedule
+1. Select *admin - Scheduled Backup all data and content* as the *Job To Run*
+1. Select the appropriate user as the *Run As* user
+1. Select the required frequency by specifying the minutes, hours, days, months and/or weekdays and a date range (if required)
+1. Click `Save` to save your schedule, or press `OK` to save and return to the schedule list.
 
 An example configuration is shown for daily backups.
 
@@ -61,14 +53,10 @@ The Skyve platform includes cyclic retention settings to allow you to control ho
 To access the cyclic retention settings:
 
 1. Login with a user which has the `DevOps` role
-2. From the top right hand corner, switch to power user/desktop mode if not already in there
-
-    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
-    
-3. Navigate to the Admin module, and select the *Data Maintenance* menu item
-4. Switch to the *Backups* tab
-5. Set the cyclic retention settings (shown below) as required.
-6. Press `Save` to save your settings
+1. Navigate to the Admin module, and select the *Data Maintenance* menu item
+1. Switch to the *Backup/Restore* tab
+1. Set the cyclic retention settings (shown below) as required.
+1. Press `Save` to save your settings
 
 ![Cyclic backup retention](./../assets/images/backup-restore/cyclic-period-schedule.png "Cyclic backup retention")
 
@@ -83,19 +71,15 @@ Skyve offers a number of *Pre-Process* options to handle cases where the applica
 To restore a Skyve backup:
 
 1. Login with a user which has the `DevOps` role
-2. From the top right hand corner, switch to power user/desktop mode if not already in there
-
-    ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
-    
-3. Navigate to the Admin module, and select the *Data Maintenance* menu item
-4. Switch to the *Backups* tab
+1. Navigate to the Admin module, and select the *Data Maintenance* menu item
+1. Switch to the *Backup/Restore* tab
     1. If restoring from an application which may have a different version of the application, we recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
-5. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the backup area - inside the application *content* folder)
-6. Refresh the backup list to check the upload was successful
-7. Select the uploaded backup in the list
-8. Select the appropriate *Content Option*, *Indexing Option* and *Pre-Process* (all explained below)
-9. Press the *Restore* button (bottom RHS of the view) 
-10. The restore process is run as a Skyve *Job* and the progress and completion of the restore can be reviewed from the admin *Jobs* menu
+1. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the backup area - inside the application *content* folder)
+1. Refresh the backup list to check the upload was successful
+1. Select the uploaded backup in the list
+1. Select the appropriate *Content Option*, *Indexing Option* and *Pre-Process* (all explained below)
+1. Press the *Restore* button (bottom RHS of the view) 
+1. The restore process is run as a Skyve *Job* and the progress and completion of the restore can be reviewed from the admin *Jobs* menu
 
 *WARNING*: Wait until the *Restore* process completes before taking any other actions. While the *Restore* process is in progress, data entry or other application activities may lead to unexpected results.
 
