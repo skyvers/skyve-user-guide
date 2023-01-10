@@ -60,3 +60,31 @@ _Prerequisites_: Access to a SMTP server or email relay service (e.g. [Postmark]
 1. Verify you received the email
 
 _Note_: To prevent issues with email being sent from your Skyve application being flagged as spam, ensure the `General` tab's `Password Reset` -> `Send/From Email Address` and the `Startup` tab's `Configuration` -> `Mail Settings` -> `Default Sender` match the of your SMPT server or that of your application.
+
+## Scheduling the disk space alarm
+
+Skyve has the ability to monitor the available disk space of the server it is running on, however this is not enabled by default.
+
+To schedule a disk space check which will email the system support user if disk falls below  a specified threshold, the user must have the *JobMaintainer* role in the admin module and have email configured.
+
+_Prerequisites_: Your application has its SMPT settings configured to send the disk space alarm email.
+
+To schedule the disk space alarm job:
+
+1. Login with a user which has the `JobMaintainer` role
+1. Navigate to the Admin module, and select the *Jobs* menu item
+1. Switch to the *Schedule* tab
+1. Click the `+` symbol to create a new schedule
+1. Select *admin - Available Disk Space Alarm* as the *Job To Run*
+1. Select an appropriate user as the *Run As* user (e.g. a system user or administrator)
+1. Select the required frequency by specifying the minutes, hours, days, months and/or weekdays and a date range (if required)
+    1. E.g. to schedule to run every day at 6am, change _Minutes_ to `Selected` and tick `00`, change _Hours_ to `Selected` and tick `06`
+1. Click `Save` to save your schedule, or press `OK` to save and return to the schedule list.
+
+### Configure Thresholds
+
+_Prerequisites_: Your user has the *System Administrator* role.
+
+By default, the disk space alarm will send an email to the Support Email Address configured in Configuration -> Startup Configuration when the available disk space reaches less than 10%.
+
+To modify the threshold when the disk space alarm is set, navigate to the Configuration page, General tab. Under the _Available Disk Space Alarm_ section, you can enter a new percentage or alarm level in MB.
