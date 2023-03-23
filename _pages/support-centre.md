@@ -18,7 +18,7 @@ The Biz Hub support centre is the best way
 
 ### Signing in
 
-Once you have been provided with an account, sign in using your email address.
+Once you have been provided with an account, open a browser an navigate to the [Biz Hub Support Centre](https://apps.bizhub.com.au), then sign in using your email address.
 
 If you don't know, or have forgotten your password, use the `Reset your password` link at the bottom of the page.
 
@@ -42,30 +42,39 @@ You will be returned to the current request list:
 
 Rather than using unsecured email for sensitive data, or when the file is too large for email, use the secure drive feature of the support centre. The secure drive is only visible by your user, and our team. Files can't be seen by other users in your domain or organisation.
 
-To upload a file, choose the secure drive menu item.
+To upload a file to the secure drive:
+
+* [Sign in](#signing-in) if you are not already logged in
+* Select the `Secure Drive` menu item in the left-hand menu
 
 ![Secure drive]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/secure-drive.png "Secure drive")
 
-Select the file chooser button, or drag your file into the drag area.
+* Select the file chooser button, or drag your file into the drag area.
 
 ![File chooser]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/secure-drive-upload.png "File chooser")
 
-Next, upload the file.
+* Next, upload the file.
 
 ![Upload]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/secure-drive-file-chosen.png "Upload")
 
-Once the file is uploaded, close the upload pop-up.
+* Once the file is uploaded, close the upload pop-up.
 
 ![Upload successful]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/secure-drive-file-uploaded.png "Upload successful")
 
 ### Downloading a file
 
-From the secure drive area, select the file to download and press `Download`
+Files in the secure drive are only visible by your user, and our team. Files can't be seen by other users in your domain or organisation.
 
-![Upload successful]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/secure-drive-upload-complete.png "Upload successful")
+If you have been notified to download a file from the secure drive:
+
+1. [Sign in](#signing-in) if you are not already logged in
+1. Select the `Secure Drive` menu item in the left-hand menu
+1. From the `Files` area, select the file in the list to download and press `Download`
+
+![Download Files]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/secure-drive-upload-complete.png "Download Files")
 
 ### Logout/Signing out
 
-If your session is inactive, you will be automatically logged out after a time out. To log out immediately, drop down the RHS selector and choose Logout.
+If your session is inactive, you will be automatically logged out after a time out. To log out immediately, use the drop-down in the top right-hand corner and choose Logout.
 
 ![Logout]({{ site.url }}{{ site.baseurl }}/assets/images/support-centre/support-centre-logout.png "Logout")
