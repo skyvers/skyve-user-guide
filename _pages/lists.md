@@ -30,6 +30,29 @@ If you wish to no longer have the list sorted, you can return the list to
 the default configuration by clicking on the menu item on the left hand side
 that you clicked to get to your current screen.
 
+#### Group by Column
+
+Data in a list can be grouped, e.g. by a status column. To group columns in a list, 
+right-click on the column heading, e.g. "Role Title" in this example, to group all the staff 
+in this list by their role title.
+
+![Grouping controls]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-grouping.png)
+
+_List with grouping applied_
+
+![Applied grouping]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-grouping-2.png)
+
+#### Show/Hide Columns
+
+Sometimes lists can include additional columns which are not shown by default, or you may 
+want to hide some columns. To modify which columns are shown, right-click anywhere on the column 
+header row and hover over `Columns`, then click on the columns to show or hide. A ticked colum 
+will be shown in the list, a blank column will not be shown.
+
+![Show additional columns]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-show-hide.png)
+
+To save a particular combination of columns, see [Snapshots]({{ site.url }}{{ site.baseurl }}/snapshots).
+
 ### List Tools
 
 ![List Tools]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ListTools.PNG)
