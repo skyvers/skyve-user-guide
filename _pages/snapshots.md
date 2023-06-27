@@ -34,7 +34,7 @@ To restore a saved snapshot:
 1. From the Snapshot menu, click the name of the snapshot you wish to restore
 1. Skyve will update the list grid with the settings in your saved snapshot
 
-![Restore snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/restore-shapshot.png)
+![Restore snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/restore-snapshot.png)
 
 ## Updating a Snapshot
 
@@ -46,7 +46,7 @@ To make changes to an existing snapshot:
 1. From the `Snapshot` menu again, hover over the name of the selected snapshot and select `Update snapshot`
 1. Your snapshot will be updated to reflect the current list grid configuration
 
-![Update snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/update-shapshot.png)
+![Update snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/update-snapshot.png)
 
 ## Deleting a Snapshot
 
@@ -58,7 +58,7 @@ To delete an existing snapshot you no longer want to keep:
 
 1. Select `Yes` to confirm deletion of the snapshot
 
-![Delete snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/delete-shapshot.png)
+![Delete snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/delete-snapshot.png)
 
 ## Sharing a Snapshot
 
