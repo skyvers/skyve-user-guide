@@ -8,7 +8,7 @@ sidebar:
   nav: docs
 ---
 
-Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}lists/) in the power user/desktop 
+Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}/lists) in the power user/desktop 
 mode of Skyve applications is Snapshots. Snapshots allow you to save customisations to a list grid, such as 
 advanced filters, custom sorting or column configuration.
 
