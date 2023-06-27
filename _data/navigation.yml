@@ -13,6 +13,8 @@ docs:
         url: /document-numbers/
       - title: "List Functionality"
         url: /lists/
+      - title: "Snapshots"
+        url: /snapshots/
       - title: "Users"
         url: /users/
       - title: "Self-Registration"

@@ -82,6 +82,11 @@ The Summary Line  in the bottom left corner can be applied to enact a number of 
 There are functions to find the `Count` of the data, the average, the minimum and 
 maximum, and the sum of any field.
 
+### Snapshots
+
+Snapshots allow you to save customisations to a list grid, such as advanced filters, custom 
+sorting or column configuration. See [Snapshots]({{ site.url }}{{ site.baseurl }}snapshots/).
+
 ### Tags
 
 If you have a set of filters that you wish to reuse, you can use `Tags`. Once 
