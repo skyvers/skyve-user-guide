@@ -10,15 +10,7 @@ sidebar:
 
 Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}/lists) in the power user/desktop 
 mode of Skyve applications is Tags. Tags allow you to filter and store the selection of records within a Skyve 
-list, or across multiple lists. 
-
-If you have a set of filters that you wish to reuse, you can use `Tags`. Once 
-you have the filters set, click the `Tag` drop-down and click `New Tag`, enter the 
-name of your tag and click `OK`. Click the drop-down again and hover over your 
-newly created tag, from there you can select `Tag all in list` to tag all the items 
-in your filter. At any point you can come back and select the tag you set, and filter 
-by your previously set filter or the tags you set. 
-
+list, or across multiple lists.
 
 To access Tags, switch into power user/desktop mode if not already in there.
 
@@ -55,6 +47,23 @@ To add _all_ records to the set of records as part of a tag:
 1. The list will update to show that all records have been tagged
 
 ![Tag all records]({{ site.url }}{{ site.baseurl }}/assets/images/tags/tag-all.png)
+
+## Removing records from a Tag
+
+To remove a _single_ record from the set of records as part of a tag:
+
+1. Navigate to a list grid with a saved tag
+1. From the `Tag` menu, click the name of the tag you wish to use
+1. Click the checkbox in the tag column for a tagged record to remove the check to remove the tag from individual records
+
+To remove the tag from _all_ records associated with a tag in a particular list:
+
+1. Navigate to a list grid with a saved tag
+1. From the `Tag` menu, click the name of the tag you wish to use to select it
+1. From the `Tag` menu again, hover over the name of the selected tag and select `Untag all in list`
+1. The list will update to show that all records have been untagged
+
+![Untag all records]({{ site.url }}{{ site.baseurl }}/assets/images/tags/untag-all.png)
 
 ## Loading/Restoring a Tag
 
