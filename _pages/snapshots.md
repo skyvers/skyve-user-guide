@@ -54,8 +54,6 @@ To delete an existing snapshot you no longer want to keep:
 
 1. Navigate to a list grid with a saved snapshot
 1. From the `Snapshot` menu, hover over the name of the selected snapshot and select `Delete Snapshot`
-1. Your snapshot will be updated to reflect the current list grid configuration
-
 1. Select `Yes` to confirm deletion of the snapshot
 
 ![Delete snapshot]({{ site.url }}{{ site.baseurl }}/assets/images/snapshots/delete-snapshot.png)

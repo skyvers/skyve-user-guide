@@ -46,8 +46,8 @@ _List with grouping applied_
 
 Sometimes lists can include additional columns which are not shown by default, or you may 
 want to hide some columns. To modify which columns are shown, right-click anywhere on the column 
-header row and hover over `Columns`, then click on the columns to show or hide. A ticked colum 
-will be shown in the list, a blank column will not be shown.
+header row and hover over `Columns`, then click on the column names to show or hide. A column with 
+a tick will be visible in the list, a column without a tick will not be shown.
 
 ![Show additional columns]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-show-hide.png)
 
@@ -69,9 +69,27 @@ information in that column. To resize all columns, click the `Auto Fit All Colum
 button. To gain a little more room to view your query, you can click on the 
 `Expand/Shrink Menu` button to minimise the side-menu.
 
+#### Export Data
+
+A key feature of List Grids is the ability to easily export data in a variety of formats 
+out of Skyve applications.
+
+![Export data button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/export-data.png)
+
+To Export Data, click on the `Export Table Data` button from the list toolbar. The key areas of the export data options are: 
+
+Report Option | Description
+------------- | -----------
+report format | Allows you to pick the export file type, e.g. CSV, XLS, PDF.
+page format   | Allows you to configure the page size and orientation.
+margins       | Specify any margins for the report.
+columns       | This allows you to choose which columns from the list should be included in the export. By default, columns that are visibile in the list will be exported (right-hand side). All columns, including those not shown are available for export.
+
+After clicking `Generate`, your file will be generated and will appear in your downloads. To change the data shown in the export file, drag and drop between the two columns. If the report is formatted, you can change the widths on the right hand side of the column selector.
+
 ### Filter Line
 
-![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/FilterLine.PNG)
+![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-line.png)
 
 The filter line has the ability to filter the list based on `like` or `contains` 
 searches. Clicking the `Use Advanced Filtering` displays the `Advanced Filtering` 
@@ -79,14 +97,6 @@ section above the list. There are three styles of Advanced Filter: `Flat`, `Nest
 and `Inline`. Each perform the same use, but you may find one style easier to use 
 than the others. Click the `Add` button to add new critera to filter by, then 
 select the filter operator and enter the data you wish to find. 
-
-### Export Data
-
-To Export Data you can click on the `Export Table Data` button, the key areas of 
-the wizard are; the report format, page formatting, margins and column selector. 
-Your file will be generated and will appear in your downloads. To change the 
-data shown in the export file, drag and drop between the two columns. If the report
-is formatted, you can change the widths on the right hand side of the column.
 
 ### Flags
 
@@ -99,11 +109,13 @@ just like any other field.
 
 ### Summary Line
 
-![Summary Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/SummaryLine.PNG)
+![Summary Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/summary-line.png)
 
-The Summary Line  in the bottom left corner can be applied to enact a number of summary functions on the data. 
-There are functions to find the `Count` of the data, the average, the minimum and 
-maximum, and the sum of any field.
+The Summary Line appears at the bottom of the list grid. The summary control 
+in the left corner can be applied to enact a number of summary functions on the data. 
+
+There are functions to find the `Count` of the data, the average, the minimum and maximum, 
+and the sum of any field.
 
 ### Snapshots
 
@@ -112,9 +124,5 @@ sorting or column configuration. See [Snapshots]({{ site.url }}{{ site.baseurl }
 
 ### Tags
 
-If you have a set of filters that you wish to reuse, you can use `Tags`. Once 
-you have the filters set, click the `Tag` drop-down and click `New Tag`, enter the 
-name of your tag and click `OK`. Click the drop-down again and hover over your 
-newly created tag, from there you can select `Tag all in list` to tag all the items 
-in your filter. At any point you can come back and select the tag you set, and filter 
-by your previously set filter or the tags you set. 
+Tags allow you to filter and store the selection of records within a Skyve list, or across 
+multiple lists. See [Tags]({{ site.url }}{{ site.baseurl }}/tags).
