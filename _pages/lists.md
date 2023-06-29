@@ -14,6 +14,27 @@ mode (from the top right hand corner, switch to power user mode if not already i
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
+### Filter Line
+
+![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-line.png)
+
+The filter line provides the ability to quickly and easily filter the records in a list 
+based on `like` or `contains` searches. Multiple columns can have filters applied which 
+will `and` their results together (i.e. it must match _all_ filters, not _any_).
+
+To apply a filter, press Enter on your keyboard while typing in the filter line, or click the 
+`Filter` button on the end of the filter line.
+
+![Filter button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-simple.png)
+
+#### Reset filters
+
+![Clear filters]({{ site.url }}{{ site.baseurl }}/assets/images/lists/clear-filters.png)
+
+Any applied filters can be reset by clicking the `Clear filter criteria` button from the 
+list tools. This will reset the list to it's unfiltered state. Any applied grouping and 
+sorting will still be applied.
+
 ### Column Headings
 
 ![Column Headings]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ColumnHeading.PNG)
@@ -69,6 +90,21 @@ information in that column. To resize all columns, click the `Auto Fit All Colum
 button. To gain a little more room to view your query, you can click on the 
 `Expand/Shrink Menu` button to minimise the side-menu.
 
+#### Advanced Filtering
+
+The [filter line](#filter-line) can be used to provide simple filtering, but if you require more 
+complex filter criteria, the advanced filter can be used.
+
+![Advanced filter button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/advanced-filter.png)
+
+Clicking the `Use Advanced Filtering` displays the `Advanced Filtering` 
+section above the list. There are three styles of Advanced Filter: `Flat`, `Nested`
+and `Inline`. Each perform the same function, but you may find one style easier to use 
+than the others. Click the `Add` button to add additional critera to filter by, then 
+select the filter operator and enter the data you wish to find.
+
+![Flat advanced filter]({{ site.url }}{{ site.baseurl }}/assets/images/lists/advanced-filter-flat.png)
+
 #### Export Data
 
 A key feature of List Grids is the ability to easily export data in a variety of formats 
@@ -76,7 +112,9 @@ out of Skyve applications.
 
 ![Export data button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/export-data.png)
 
-To Export Data, click on the `Export Table Data` button from the list toolbar. The key areas of the export data options are: 
+To Export Data, click on the `Export table data` button from the list toolbar. 
+
+The key areas of the export data options are: 
 
 Report Option | Description
 ------------- | -----------
@@ -87,16 +125,36 @@ columns       | This allows you to choose which columns from the list should be 
 
 After clicking `Generate`, your file will be generated and will appear in your downloads. To change the data shown in the export file, drag and drop between the two columns. If the report is formatted, you can change the widths on the right hand side of the column selector.
 
-### Filter Line
+Any simple or complex filtering applied to the list will still be applied when the data is exported. This 
+allows a specific subset of data to be exported. Combining this with a [Snapshot]({{ site.url }}{{ site.baseurl }}/snapshots)
+can allow exports to be consistently produced as an ad-hoc report.
 
-![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-line.png)
+#### Chart Data
 
-The filter line has the ability to filter the list based on `like` or `contains` 
-searches. Clicking the `Use Advanced Filtering` displays the `Advanced Filtering` 
-section above the list. There are three styles of Advanced Filter: `Flat`, `Nested`
-and `Inline`. Each perform the same use, but you may find one style easier to use 
-than the others. Click the `Add` button to add new critera to filter by, then 
-select the filter operator and enter the data you wish to find. 
+List grids in Skyve power user mode are excellent for ad-hoc reporting. Whether using complex filtering, 
+[summary functions](#summary-line) or [exporting your data](#export-data) to continue in Excel, R or 
+other applications to continue working with your data. Another option List grids provide is 
+charting your data.
+
+![Chart data button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/chart-data.png)
+
+To Chart Data, click on the `Chart this data` button from the list toolbar. 
+
+The key areas of the chart options are:
+
+Chart Option   | Description 
+-------------- | -----------
+chart type     | the type of chart to generate, pie, line, etc
+category field | selects which field is used to categorise the data, this can be combined with a bucket, e.g. to group data by year
+value field    | selects which field values are displayed in the chart
+value function | can be used to produce a numeric value for non-numeric fields, e.g. a count, or to sum numeric data
+
+Click `Generate` to produce the chart and visualise your data.
+
+![Chart example]({{ site.url }}{{ site.baseurl }}/assets/images/lists/chart-data-pie.png)
+
+As when exporting your data, any filters applied to the list will be applied when charting 
+your data.
 
 ### Flags
 
