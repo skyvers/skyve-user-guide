@@ -7,7 +7,6 @@ sidebar:
   title: "Index"
   nav: docs
 ---
-## List Grids 
 
 To get the most functionality out of list grids in Skyve, switch into power user 
 mode (from the top right hand corner, switch to power user mode if not already in there).
@@ -22,7 +21,7 @@ to minimise the side-menu.
 Clicking the button will restore the menu. You can also click and drag the button to make the 
 menu wider or narrower without collapsing it fully.
 
-### Filter Line
+## Filter Line
 
 ![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-line.png)
 
@@ -35,7 +34,7 @@ will `and` their results together (i.e. it must match _all_ filters, not _any of
 To apply a filter, press Enter on your keyboard while typing in the filter line, or click the 
 `Filter` button on the end of the filter line.
 
-#### Reset filters
+### Reset filters
 
 ![Clear filters]({{ site.url }}{{ site.baseurl }}/assets/images/lists/clear-filters.png)
 
@@ -43,30 +42,30 @@ Any applied filters can be reset by clicking the `Clear filter criteria` button 
 list tools. This will reset the list to it's unfiltered state. Any applied grouping and 
 sorting will still be applied.
 
-### Column Headings
+## Column Headings
 
 ![Column Headings]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ColumnHeading.PNG)
 
 Column headings control sorting, you can do simple sorting by clicking
 on the column heading. Clicking once will sort the list by ascending order, 
-each following click will then toggle between descending and ascending. By
-clicking the dropdown of a Column heading, you can choose to `Sort Ascending`, 
-`Sort Descending`, `Configure Sort`, `Auto Fit` the column or `Auto Fit all columns`.
-You can also choose which columns you wish to see using the `Columns` function, and Group
-by the column selected.
+each following click will then toggle between descending and ascending. 
 
-If you wish to no longer have the list sorted, you can return the list to 
-the default configuration by clicking on the menu item on the left hand side
-that you clicked to get to your current screen.
+Clicking the dropdown or right-clicking a column heading exposes the [column menu](#column-menu), 
+which allows you to `Sort Ascending`, `Sort Descending`, `Configure Sort`, `Auto Fit` the column 
+or `Auto Fit all columns`. You can also choose which columns you wish to see using the `Columns` function, 
+and `Group` by the column selected.
 
-### Column Menu
+If you wish to no longer have the list sorted, you can return the list to the default configuration 
+by clicking on the menu item on the left hand side that you clicked to get to your current screen.
+
+## Column Menu
 
 ![Column menu]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-menu.png)
 
 The column menu is available by right-clicking on a column heading. This will provide 
 advanced options for soring, grouping, resizing and showing/hiding columns.
 
-#### Auto Fit
+### Auto Fit
 
 ![Auto fit options]({{ site.url }}{{ site.baseurl }}/assets/images/lists/auto-fit.png)
 
@@ -75,7 +74,7 @@ information in that column.
 
 To resize all columns, click the `Auto Fit All Columns` button.
 
-#### Configure Sort
+### Configure Sort
 
 ![Configure sort button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/sort-configure.png)
 
@@ -93,7 +92,7 @@ sort configuration to your list.
 Your configured sort will show a superscript number representing its priority in your sort, and the 
 arrow will indicate whether the data is ascending or descending.
 
-#### Group by Column
+### Group by Column
 
 Data in a list can be grouped, e.g. by a status column. To group columns in a list, 
 right-click on the column heading, e.g. "Role Title" in this example, to group all the staff 
@@ -105,7 +104,7 @@ Below is an example of a list with grouping applied:
 
 ![Applied grouping]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-grouping-2.png)
 
-#### Show/Hide Columns
+### Show/Hide Columns
 
 Sometimes lists can include additional columns which are not shown by default, or you may 
 want to hide some columns. To modify which columns are shown, right-click anywhere on the column 
@@ -116,14 +115,14 @@ a tick will be visible in the list, a column without a tick will not be shown.
 
 To save a particular combination of columns, see [Snapshots]({{ site.url }}{{ site.baseurl }}/snapshots).
 
-### List Tools
+## List Tools
 
 ![List Tools]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ListTools.PNG)
 
 The list toolbar provides a variety of basic and more complex functions for manipulating and working with 
 lists in Skyve in power user mode.
 
-#### Advanced Filtering
+### Advanced Filtering
 
 The [filter line](#filter-line) can be used to provide simple filtering, but if you require more 
 complex filter criteria, the advanced filter can be used.
@@ -138,7 +137,7 @@ select the filter operator and enter the data you wish to find.
 
 ![Flat advanced filter]({{ site.url }}{{ site.baseurl }}/assets/images/lists/advanced-filter-flat.png)
 
-#### Export Data
+### Export Data
 
 A key feature of List Grids is the ability to easily export data in a variety of formats 
 out of Skyve applications.
@@ -164,7 +163,7 @@ Any simple or complex filtering applied to the list will still be applied when t
 allows a specific subset of data to be exported. Combining this with a [Snapshot]({{ site.url }}{{ site.baseurl }}/snapshots)
 can allow exports to be consistently produced as an ad-hoc report.
 
-#### Chart Data
+### Chart Data
 
 List grids in Skyve power user mode are excellent for ad-hoc reporting. Whether using complex filtering, 
 [summary functions](#summary-line) or [exporting your data](#export-data) to continue in Excel, R or 
@@ -191,17 +190,17 @@ Click `Generate` to produce the chart and visualise your data.
 As when exporting your data, any filters applied to the list will be applied when charting 
 your data.
 
-#### Snapshots
+### Snapshots
 
 Snapshots allow you to save customisations to a list grid, such as advanced filters, custom 
 sorting or column configuration. See [Snapshots]({{ site.url }}{{ site.baseurl }}/snapshots).
 
-#### Tags
+### Tags
 
 Tags allow you to filter and store the selection of records within a Skyve list, or across 
 multiple lists. See [Tags]({{ site.url }}{{ site.baseurl }}/tags) for a more detailed explanation.
 
-### Flags
+## Flags
 
 Flags are a useful tool for setting reminders or alerting others of something of 
 note. To set a flag, click in the `Flag` column next to the record, then enter 
@@ -210,7 +209,7 @@ when hovered over will display the message stored. To clear the flag, click the 
 and click `Clear`. If you wish to search by contents in a flag, they can be filtered
 just like any other field. 
 
-### Summary Line
+## Summary Line
 
 ![Summary Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/summary-line.png)
 
