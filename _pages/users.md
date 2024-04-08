@@ -128,3 +128,15 @@ _Prerequisites:_ You have at least one active user
 3. Zoom into the user you wish to deactivate
 4. Click _Inactive_ so that it is ticked
 5. Click _OK_
+
+### Resetting a password
+
+If a user has forgotten their password, or you need to reset it for any reason, an administrator can do so from the Users view.
+
+1. Login with a user which has the `SecurityAdministrator` role
+2. Navigate to the Admin module, and select _Users_ under Security Admin
+3. Zoom into the user you wish to reset the password for
+4. Navigate to the _Password_ tab
+5. Either specify a new and confirm password for the user, or click the _Generate Password_ button to generate a new password for the user (the password will be displayed in the _Generated password_ field)
+6. Click _OK_
+7. Notify the user of their new password
