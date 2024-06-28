@@ -62,9 +62,9 @@ The following example will walk through using the built in Communication feature
 
 ## Editing an existing Communication
 
-When you have existing Commincations in your application and wish to make changes to the content of the email.
+When you have existing Communcations in your application and wish to make changes to the content of the email.
 
-_Prerequisites:_ Your application has at least one had-hoc or system communication defined
+_Prerequisites:_ Your application has at least one ad-hoc or system communication defined
 
 1. Login with a user which has the `ContactManager` or `SecurityAdministrator` role
 2. From the admin menu, select Communication->`Communications`
