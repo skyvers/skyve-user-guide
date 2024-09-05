@@ -25,6 +25,19 @@ To take the backup:
 1. Once the backup is complete, refresh the *Backups* list to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
 1. If you wish to download the backup, select the backup from the list and press *Download Backup*
 
+### Backup options
+Before making a backup, there are options found next to the *Backup* button, highlighted below:
+
+- **Content** - *Content* refers to files and attachments that are uploaded to the system. By default, this check-box is ticked. Untick this to exclude content from the backup that will be created.
+- **Audit Log** - *Audit log* is the records of changes in the system. A list of audits can be found by navigating to *Admin -> Audits* in the menu. By default, this check-box is ticked. Untick this to exclude audit logs from the backup that will be created.
+- **Sensitivity** - While making a backup, skyve has the ability to redact certain data for security purposes. The drop-down is used to select the sensitivity level to be used during redaction. Attributes with security level that is greater than or equal to the security level selected are redacted. Below are the security levels available in ascending order in terms of sensitivity:
+		- **None**
+		- **Internal** 
+		- **Confidential**
+		- **Restricted**
+		- **Personal**
+		- **Secret**
+
 ## Scheduling regular backups
 
 Skyve has the capability of running a regular backup schedule, however this is not enabled by default.
