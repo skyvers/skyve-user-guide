@@ -36,6 +36,7 @@ Before making a backup, there are options found next to the *Backup* button, hig
 		- **Confidential**
 		- **Restricted**
 		- **Personal**
+		- **Secret**
 
 ## Scheduling regular backups
 
