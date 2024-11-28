@@ -134,6 +134,14 @@ Map settings define the mapping capabilities for your Skyve application:
 - **Layers**: Google Map or Leaflet layer to show the map backdrop.
 - **Centre**: Where to centre a new map by default when it opens.
 
+To modify the map settings for your application:
+
+1. Login with a user which has the `SecurityAdministrator` role.
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
+1. On the `Startup` tab, navigate to the `Map Settings` section.
+1. Modify the map settings as required.
+1. Click `Save`.
+
 ## Security Settings
 
 Security settings enhance user safety and protect against unauthorized access:
@@ -142,3 +150,11 @@ Security settings enhance user safety and protect against unauthorized access:
 - **CAPTCHA Type**: Which CAPTCHA service to use for the self-registration and self-service password reset (forgot password) function. You may choose between Cloudflare Turnstile and Google Recaptcha or leave blank to not enable a CAPTCHA.
 - **Site and Secret Keys**: These are required if using either CAPTCHA service and can be obtained from the Google Recaptcha console or Cloudflare Turnstile console.
 - **Geo IP Key/Token**: By supplying a Geo IP API token (one can be obtained from [ipinfo.io](https://ipinfo.io/)), you can create a list of allowed or disalled countries for registration and password reset.
+
+To modify the security settings for your application:
+
+1. Login with a user which has the `SecurityAdministrator` role.
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
+1. On the `Startup` tab, navigate to the `Security Settings` section.
+1. Modify the security settings as required.
+1. Click `Save`.
