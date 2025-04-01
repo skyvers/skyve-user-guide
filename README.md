@@ -50,14 +50,14 @@ By selecting an item from a list, we Zoom into that record. If that record's vie
 
 ### Switching Interfaces
 
-Skyve applications feature two separate user interfaces, both with their own advantages depending on the use case. In the default (_normal_) mode, the interface is responsive and mobile and tablet friendly, with larger controls for touch and whitespace for legibility.
+Skyve applications feature two separate user interfaces, both with their own advantages depending on the use case. In the default (_responsive_) mode, the interface is responsive and mobile and tablet friendly, with larger controls for touch and whitespace for legibility.
 
-The alternate interface, _power user mode_, is great for desktop browsers where lots of data manipulation, reporting or exorting is required.
+The alternate interface, _power user_ mode, is great for desktop browsers where lots of data manipulation, reporting or exporting is required.
 
-To switch interfaces, click the switch icon from the top right hand corner. In _normal_ mode, this is accessed by clicking your username, and selecting the switch mode icon from the user menu.
+To switch interfaces, click the switch icon from the top right hand corner. In _responsive_ mode, this is accessed by clicking your username, and selecting the switch mode icon from the user menu.
 
   ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
 In _power user_ mode, the same switch icon is available from the toolbar at the top of the application.
 
-_Note_: the switch mode button may not always be available depending on your application and if it suppports both interfaces.
+_Note_: the switch mode button may not always be available depending on your application permissions and if it supports both interfaces.
