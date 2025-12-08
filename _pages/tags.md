@@ -113,7 +113,7 @@ To perform a bulk action against a tag:
    - **Module**: Select the module containing the document and action
    - **Document**: Choose the document type for the tagged items
    - **Action**: Select the action to perform on each tagged item
-   - **Condition**: Optionally specify a condition that an item must meet for the action to be performed on them
+   - **Condition**: Optionally specify a condition that an item must meet for the action to be performed on it
    - **Cache Evict**: Choose cache eviction strategy (None, Bean, or All)
    - **Untag successful documents**: Check to automatically untag successfully processed items
    - **Notify when job is complete**: Check to receive an email notification when finished
