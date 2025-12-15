@@ -96,3 +96,37 @@ To delete an existing tag you no longer want to keep:
 1. Select `Yes` to confirm deletion of the tag
 
 ![Delete tag]({{ site.url }}{{ site.baseurl }}/assets/images/tags/delete-tag.png) 
+
+## Performing bulk actions against a tag
+
+![Tag bulk actions]({{ site.url }}{{ site.baseurl }}/assets/images/tags/tag-bulk-actions.png)
+
+One of the most powerful features of tags is the ability to perform bulk actions on all tagged items. 
+This allows you to execute server-side actions or default operations across all records associated with a tag.
+
+To perform a bulk action against a tag:
+
+1. Navigate to Admin -> Tags
+2. Select a tag from the list of tags that you wish to perform an action on
+3. Navigate to the `Action` tab.
+4. Configure the action settings:
+   - **Module**: Select the module containing the document and action
+   - **Document**: Choose the document type for the tagged items
+   - **Action**: Select the action to perform on each tagged item
+   - **Condition**: Optionally specify a condition that an item must meet for the action to be performed on it
+   - **Cache Evict**: Choose cache eviction strategy (None, Bean, or All)
+   - **Untag successful documents**: Check to automatically untag successfully processed items
+   - **Notify when job is complete**: Check to receive an email notification when finished
+5. Click `Run Tag Action Job` to start processing
+6. The job will execute the specified action on each tagged item that meets the condition
+
+Available default actions include:
+- **Delete Documents** - Untags and permanently deletes the item
+- **Save Documents** - Saves the item to the database
+- **Upsert (Save Top Level Only) Documents** - Updates or inserts only the top-level item using upsert operation
+- **Validate Documents** - Validates the item
+
+You can also select custom document actions that have been defined for the specific document type.
+
+The bulk action runs as a background job, allowing you to continue working while it processes the tagged items. 
+Progress is tracked and logged, with detailed results available in the [job](https://skyvers.github.io/skyve-user-guide/jobs/) execution log.
