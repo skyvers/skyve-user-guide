@@ -12,7 +12,8 @@ Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}/lists)
 mode of Skyve applications is Tags. Tags allow you to filter and store the selection of records within a Skyve 
 list, or across multiple lists.
 
-To access Tags, switch into desktop mode if not already in it, by clicking your username in the top right hand corner and choosing `Switch Mode`.
+**Desktop mode required**: Tags are only available in _desktop mode_, including the `Admin -> Tags` menu item used later on this page. To switch modes, click your username in the top right hand corner and choose `Switch Mode` — see [Switching Interfaces]({{ site.url }}{{ site.baseurl }}/#switching-interfaces).
+{: .notice--info}
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 

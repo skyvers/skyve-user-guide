@@ -54,10 +54,26 @@ Skyve applications feature two separate user interfaces, both with their own adv
 
 The alternate interface, _desktop_ mode (sometimes called _power user_ mode), is great for desktop browsers where lots of data manipulation, reporting or exporting is required.
 
+#### What each mode offers
+
+In _responsive_ mode (the default), list grids offer column sorting, a filter row and record navigation, and every view is designed to work well on phones and tablets as well as desktop browsers.
+
+_Desktop_ mode adds the advanced list tools described in [List Functionality]({{ site.url }}{{ site.baseurl }}/lists/):
+
+- [Tags]({{ site.url }}{{ site.baseurl }}/tags/) and flags on list records
+- [Snapshots]({{ site.url }}{{ site.baseurl }}/snapshots/) (saved list configurations)
+- Advanced filtering, grouping and the summary line
+- Exporting list data and ad-hoc charting
+- Global [Content Search]({{ site.url }}{{ site.baseurl }}/content-search/)
+
+Some menu items only appear in one mode or the other — for example, the `Tags` and `Snapshots` menu items in the Admin module are only shown in desktop mode — so the application menu may differ between modes.
+
+#### Switching between modes
+
 To switch interfaces, use the `Switch Mode` control. In _responsive_ mode, this is accessed by clicking your username in the top right hand corner, and selecting `Switch Mode` from the user menu.
 
   ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
 In _desktop_ mode, the same switch icon is available from the toolbar at the top of the application.
 
-_Note_: the switch mode button may not always be available depending on your application permissions and if it supports both interfaces. Your selected mode applies for your current session only - the next time you sign in you will start in the default mode. Some menu items and features are only available in one mode or the other, so the application menu may differ between modes.
+_Note_: the switch mode button may not always be available depending on your application permissions and if it supports both interfaces. Your selected mode applies for your current session only - the next time you sign in you will start in the default mode.

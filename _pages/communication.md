@@ -17,7 +17,7 @@ _Prerequisites:_ Your application has its SMTP settings configured to enable sen
 The following example will walk through using the built in Communication feature from the admin module to send an email from within a Skyve application. In this example, we will use the Tag feature to select some Contacts as the recipients of the test email.
 
 1. Login with a user which has the `ContactManager` or `SecurityAdministrator` role
-2. Switch to desktop mode if not already in it, by clicking your username in the top right hand corner and choosing `Switch Mode` (tagging records from a list is only available in desktop mode)
+2. Switch to desktop mode if not already in it, by clicking your username in the top right hand corner and choosing `Switch Mode` — see [Switching Interfaces]({{ site.url }}{{ site.baseurl }}/#switching-interfaces). Tagging records from a list is only available in desktop mode.
 
     ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
     

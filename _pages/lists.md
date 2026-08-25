@@ -8,10 +8,8 @@ sidebar:
   nav: docs
 ---
 
-To get the most functionality out of list grids in Skyve, switch into desktop mode
-(click your username in the top right hand corner and choose `Switch Mode`). Note that most of
-the features described on this page - tagging, flags, snapshots, exporting, charting and the
-summary line - are only available in desktop mode.
+**Desktop mode required**: most of the features described on this page — tagging, flags, snapshots, advanced filtering, grouping, the summary line, exporting and charting — are only available in _desktop mode_. In the default responsive interface, list grids offer column sorting, a filter row and record navigation. To switch modes, click your username in the top right hand corner and choose `Switch Mode` — see [Switching Interfaces]({{ site.url }}{{ site.baseurl }}/#switching-interfaces).
+{: .notice--info}
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
