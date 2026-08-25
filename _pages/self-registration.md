@@ -29,3 +29,6 @@ To enable self-registration:
 1. configure your Mail Settings and make sure Test Mode and Test Mail Recipient are not set and click Save
 1. from the General tab of Security Admin -> Configuration, select the “User Self Registration Group” and set the “Anonymous Public User” and click Save
 1. If everything is set up correctly, your login page should now switch to email address as the username field, and show a link to Register below the login form.
+## Managing self-registered accounts
+
+Registered users activate their own account via the link in their activation email. If a user does not receive the email or their link has expired, an administrator can resend the activation email or activate the account manually from the user's record — see [Activating a self-registered user]({{ site.url }}{{ site.baseurl }}/users/#activating-a-self-registered-user).

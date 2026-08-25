@@ -139,5 +139,28 @@ If a user has forgotten their password, or you need to reset it for any reason, 
 3. Zoom into the user you wish to reset the password for
 4. Navigate to the _Password_ tab
 5. Either specify a new and confirm password for the user, or click the _Generate Password_ button to generate a new password for the user (the password will be displayed in the _Generated password_ field)
-6. Click _OK_
-7. Notify the user of their new password
+6. Tick _Must change password_ so the user is required to set their own password the next time they sign in
+7. Click _OK_
+8. Notify the user of their new password
+
+### Activating a self-registered user
+
+If [User Self-Registration]({{ site.url }}{{ site.baseurl }}/self-registration/) is enabled for your application, self-registered users activate their own account via the link in their activation email. An administrator can manage activation from the user's record:
+
+1. Login with a user which has the `SecurityAdministrator` role
+2. Navigate to the Admin module, and select _Users_ under Security Admin
+3. Zoom into the user
+4. On the _Profile_ tab, tick _Account Activated_ to activate the account manually (for example, if the user cannot receive the activation email)
+5. Alternatively, click _Resend Activation_ to send the user a fresh activation email — their previous activation link will no longer work
+
+### Data Groups
+
+Data Groups partition data within an application — a user assigned to a data group only sees records belonging to that data group, while users with no data group assigned can see records across all data groups (subject to their other permissions). Data groups are separate from security groups: security groups control *what a user can do*, data groups control *which records they can see*.
+
+To manage data groups:
+
+1. Login with a user which has the `SecurityAdministrator` role
+2. Navigate to the Admin module, and select _Data Groups_ under Security Admin
+3. Click the `+` button to add a data group, and give it a _Name_ and _Description_
+
+To assign a user to a data group, zoom into the user from _Users_ under Security Admin and select the _Data Group_ on the _Profile_ tab. The Profile tab also provides the _Home Module_ setting, which controls which module the user lands in when they first sign in.
