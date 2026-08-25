@@ -8,11 +8,11 @@ sidebar:
   nav: docs
 ---
 
-Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}/lists) in the power user/desktop 
+Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}/lists) in the desktop
 mode of Skyve applications is Snapshots. Snapshots allow you to save customisations to a list grid, such as 
 advanced filters, custom sorting or column configuration.
 
-To access Snapshots, switch into power user/desktop mode if not already in there.
+To access Snapshots, switch into desktop mode if not already in it, by clicking your username in the top right hand corner and choosing `Switch Mode`.
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
@@ -68,5 +68,5 @@ not be reflected in your snapshot.
 1. Navigate to `admin -> Snapshots`
 1. Double click or zoom into the snapshot you wish to share with another user
 1. Select a user from the `Copy to user` picker
-1. Enter a name fo the snapshot
+1. In desktop mode, you can also enter a name for the copied snapshot (in the default responsive interface, the copy keeps the original name)
 1. Click `Make Copy`

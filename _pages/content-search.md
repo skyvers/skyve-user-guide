@@ -7,24 +7,26 @@ sidebar:
   title: "Index"
   nav: docs
 ---
-Skyve applications include the powerful open-source search library, [Elasticsearch](https://www.elastic.co/products/elasticsearch), for indexing and searching both data and content within an application.
+Skyve applications include an embedded full-text search index (based on the open-source [Apache Lucene](https://lucene.apache.org/) search library) for indexing and searching both data and content within an application. Other search providers, such as Elasticsearch, can optionally be configured by your application host.
 
-By default, all text area fields and uploaded text files are indexed and available to be searched.
+The fields your application has been configured to index (typically long text fields), along with the text extracted from uploaded attachments (such as PDF and Word documents), are available to be searched.
 
 ### Global Search
+
+Global search is only available in desktop mode. Note that the search icon will only appear if your user has been granted access to text search.
 
 To use the global search function from a Skyve application:
 
 1. Login to your application
-2. From the top right hand corner, switch to power user mode if not already in there
+2. Switch to desktop mode if not already in it, by clicking your username in the top right hand corner and choosing `Switch Mode`
 
     ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
-3. From the command panel, click the search icon
+3. From the toolbar in the top right hand corner of the page, click the search icon
 
     ![Global search button]({{ site.url }}{{ site.baseurl }}/assets/images/search.png)
 
-4. Enter a search term into the search field and click `Search`
-5. Search results will be returned in order of relevance, showing which document the result was found in and an except of the resulting match
+4. Enter a search term (at least 4 characters) into the search field and click `Search`
+5. Search results will be returned in order of relevance, showing which document the result was found in and an excerpt of the resulting match
 6. Clicking the `data` link will take you to the record which contains the search result
 7. Clicking the `content` link will open the uploaded file which contains the search result

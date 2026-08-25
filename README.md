@@ -26,18 +26,18 @@ The main application menu is broken into sections by Module, and then typically 
 
 #### Action Panel
 
-Once a record is is opened, the application loads the detail view for that document. This then provides the action panel at the top of the view for interaction with the document. The action panel has the following buttons:
+Once a record is opened, the application loads the detail view for that document. This then provides the action panel at the top of the view for interaction with the document. The action panel has the following buttons:
 
 * _OK_ - This performs a Save and Close action when clicked. This will save any 
 changes and return you to the view you came from (e.g. the list of this document).
 * _Save_ - This saves any changes to the current view when clicked. 
 * _Delete_ - This will delete the current document (and any child documents) when clicked and return you to the view you came from. 
-* _Cancel_ - This will undo any changes which have been made and return you to the view you came from without saving.
+* _Cancel_ - This will discard any unsaved changes and return you to the view you came from without saving. Note there is no confirmation prompt - unsaved changes are silently discarded.
 						
 If you have "zoomed" into a list within another document, your action panel buttons will change to provide two different options based on your context.
 
 * _Zoom Out_ - This will return you to the parent view of the record you are in. Any changes will be saved or cancelled based on the action you take at the parent level.
-* _Remove_ - If you added a new record to a list on the parent document, this will delete the new record and return you to the parent view. An example of this is adding a role to a user in the admin module.
+* _Remove_ - This deletes the child record you are currently zoomed into and returns you to the parent view, after a confirmation prompt. An example of this is removing a role from a user in the admin module. If you do not have delete permission for the document, _Remove_ is only offered for records that have not yet been saved.
 
     ![Action panel buttons]({{ site.url }}{{ site.baseurl }}/assets/images/action-panel.png)
 
@@ -52,12 +52,12 @@ By selecting an item from a list, we Zoom into that record. If that record's vie
 
 Skyve applications feature two separate user interfaces, both with their own advantages depending on the use case. In the default (_responsive_) mode, the interface is responsive and mobile and tablet friendly, with larger controls for touch and whitespace for legibility.
 
-The alternate interface, _power user_ mode, is great for desktop browsers where lots of data manipulation, reporting or exporting is required.
+The alternate interface, _desktop_ mode (sometimes called _power user_ mode), is great for desktop browsers where lots of data manipulation, reporting or exporting is required.
 
-To switch interfaces, click the switch icon from the top right hand corner. In _responsive_ mode, this is accessed by clicking your username, and selecting the switch mode icon from the user menu.
+To switch interfaces, use the `Switch Mode` control. In _responsive_ mode, this is accessed by clicking your username in the top right hand corner, and selecting `Switch Mode` from the user menu.
 
   ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
-In _power user_ mode, the same switch icon is available from the toolbar at the top of the application.
+In _desktop_ mode, the same switch icon is available from the toolbar at the top of the application.
 
-_Note_: the switch mode button may not always be available depending on your application permissions and if it supports both interfaces.
+_Note_: the switch mode button may not always be available depending on your application permissions and if it supports both interfaces. Your selected mode applies for your current session only - the next time you sign in you will start in the default mode. Some menu items and features are only available in one mode or the other, so the application menu may differ between modes.

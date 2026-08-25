@@ -133,7 +133,7 @@ _Prerequisites_: Access to a SMTP server or email relay service (e.g. [Postmark]
 
 1. Login with a user which has the `SecurityAdministrator` role.
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
-1. On the `Startup` tab, navigate to the `Mail Settings` section.
+1. On the `Startup Configuration` tab, navigate to the `Mail Settings` section.
 1. Enter the server url for your mail server, port, username and password.
 1. The default sender should be modified to match the domain of your application.
 1. Ensure `Test Mode` is unchecked.
@@ -158,7 +158,7 @@ To modify the map settings for your application:
 
 1. Login with a user which has the `SecurityAdministrator` role.
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
-1. On the `Startup` tab, navigate to the `Map Settings` section.
+1. On the `Startup Configuration` tab, navigate to the `Map Settings` section.
 1. Modify the map settings as required.
 1. Click `Save`.
 
@@ -175,7 +175,7 @@ To modify the security settings for your application:
 
 1. Login with a user which has the `SecurityAdministrator` role.
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
-1. On the `Startup` tab, navigate to the `Security Settings` section.
+1. On the `Startup Configuration` tab, navigate to the `Security Settings` section.
 1. Modify the security settings as required.
 1. Click `Save`.
 
@@ -198,7 +198,7 @@ The following options are available:
 1. Register for an account at [ipinfo.io](https://ipinfo.io/) and obtain an API token.
 1. Login with a user which has the `SecurityAdministrator` role.
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
-1. On the `Startup` tab, navigate to the `Security Settings` section.
+1. On the `Startup Configuration` tab, navigate to the `Security Settings` section.
 1. Enter your API token into the `GEO IP Key/Token` field. The country selection options will then be displayed.
 1. Select the desired `Country List Type` (`Whitelist` or `Blacklist`).
 1. Move the applicable countries from `Available Countries` to `Selected Countries`.
@@ -212,7 +212,7 @@ To be notified by email when a Geo IP block occurs:
 
 1. Login with a user which has the `SecurityAdministrator` role.
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
-1. On the `Startup` tab, navigate to the `Notifications` section.
+1. On the `Startup Configuration` tab, navigate to the `Notifications` section.
 1. Check `Geo IP Block Notifications`.
 1. Optionally specify a `Security Notifications Email Address`. If not specified, notifications will be sent to the support email address.
 1. Click `Save`.
@@ -227,6 +227,6 @@ _Prerequisites_: Your application has its SMTP settings configured, and a `Suppo
 
 1. Login with a user which has the `SecurityAdministrator` role.
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
-1. On the `Startup` tab, navigate to the `Notifications` section.
+1. On the `Startup Configuration` tab, navigate to the `Notifications` section.
 1. Check `Password Change Notifications`.
 1. Click `Save`.
