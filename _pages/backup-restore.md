@@ -81,7 +81,9 @@ To access the cyclic retention settings:
 
 ## Cloud backups
 
-By default, backups are stored on the application server's filesystem. Skyve applications can instead store backups in cloud storage (Azure Blob Storage), so backups survive the loss of the server:
+By default, backups are stored on the application server's filesystem. Skyve applications can instead store backups in cloud storage (Azure Blob Storage), so backups survive the loss of the server.
+
+_Prerequisites_: cloud backups require your application to be built with the Azure storage dependency and configured accordingly — this is a developer/deployment change, not a runtime setting. Ask your developer or Skyve provider to enable it (see [Cloud backups in the developer guide](https://skyvers.github.io/skyve-dev-guide/backup-restore/#cloud-backups)). Once the application supports it, the settings below become effective:
 
 1. Login with a user which has the `SecurityAdministrator` role
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`
