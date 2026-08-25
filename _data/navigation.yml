@@ -9,6 +9,8 @@ docs:
         url: /configuration/
       - title: "Content Search"
         url: /content-search/
+      - title: "Dashboards"
+        url: /dashboards/
       - title: "Document Numbers"
         url: /document-numbers/
       - title: "List Functionality"
@@ -19,6 +21,10 @@ docs:
         url: /tags/
       - title: "Users"
         url: /users/
+      - title: "Security Log"
+        url: /security-log/
+      - title: "Audits"
+        url: /audits/
       - title: "Self-Registration"
         url: /self-registration/
       - title: "Import and export"

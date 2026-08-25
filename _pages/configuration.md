@@ -204,7 +204,7 @@ The following options are available:
 1. Move the applicable countries from `Available Countries` to `Selected Countries`.
 1. Click `Save`.
 
-Once enabled, self-registration and password reset requests from denied countries will be silently rejected (the requester receives no indication that they were blocked) and a `GEO IP Block` security event will be recorded against the affected user.
+Once enabled, self-registration and password reset requests from denied countries will be silently rejected (the requester receives no indication that they were blocked) and a `GEO IP Block` security event will be recorded against the affected user in the [Security Log]({{ site.url }}{{ site.baseurl }}/security-log/).
 
 ### Geo IP Block Notifications
 
