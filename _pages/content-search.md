@@ -13,7 +13,8 @@ The fields your application has been configured to index (typically long text fi
 
 ### Global Search
 
-Global search is only available in desktop mode. Note that the search icon will only appear if your user has been granted access to text search.
+**Desktop mode required**: global search is only available in _desktop mode_. To switch modes, click your username in the top right hand corner and choose `Switch Mode` — see [Switching Interfaces]({{ site.url }}{{ site.baseurl }}/#switching-interfaces). Note that the search icon will only appear if your user has been granted access to text search.
+{: .notice--info}
 
 To use the global search function from a Skyve application:
 

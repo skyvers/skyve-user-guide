@@ -12,7 +12,8 @@ Skyve comes with a few different options for bulk importing and exporting of dat
 
 ## Bizport
 
-_Note:_ Bizport is only available in the legacy desktop mode, which is disabled by default in current Skyve applications. In the default (responsive) interface, use [Quick Import/Export](#quick-importexport) below instead.
+**Desktop mode required**: Bizport is only available in _desktop mode_ — the responsive interface does not include it. In the default (responsive) interface, use [Quick Import/Export](#quick-importexport) below instead. To switch modes, click your username in the top right hand corner and choose `Switch Mode` — see [Switching Interfaces]({{ site.url }}{{ site.baseurl }}/#switching-interfaces).
+{: .notice--info}
 
 Bizport is a powerful feature to allow sophisticated bulk data manipulation and offline data maintenance. If existing data is exported, the internal UUIDs will be exported in an Excel workbook, in the bizId column and also where references between records exist.
 
