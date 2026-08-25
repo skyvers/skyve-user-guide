@@ -24,6 +24,7 @@ To take the backup:
 1. Press the *Backup* button in the *Backups* section
 1. Once the backup is complete, press *Refresh List* to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
 1. If you wish to download the backup, select the backup from the list and press *Download Backup*
+1. To delete a backup that is no longer required, select it in the list and press *Delete* (this permanently removes the backup folder from the server filesystem)
 
 ### Backup options
 Before making a backup, there are options found next to the *Backup* button, highlighted below:
@@ -37,6 +38,8 @@ Before making a backup, there are options found next to the *Backup* button, hig
     - **Restricted**
     - **Personal**
     - **Secret**
+
+_Note_: the *Sensitivity* redaction setting applies to ad-hoc backups taken with the *Backup* button only — scheduled backups are always taken unredacted.
 
 ## Scheduling regular backups
 
@@ -61,7 +64,10 @@ An example configuration is shown for daily backups.
 
 ## Cyclic retention settings
 
-The Skyve platform includes cyclic retention settings to allow you to control how many backups are kept as part of the regular schedule.
+The Skyve platform includes cyclic retention settings to allow you to control how many backups are kept as part of the regular schedule. The four settings — *Daily Backup Retention*, *Weekly Backup Retention*, *Monthly Backup Retention* and *Yearly Backup Retention* — are found at the top of the *Backup/Restore* tab, and each specifies how many backups of that cycle to keep (older ones are removed automatically). Backup files are prefixed `DAILY_`, `WEEKLY_`, `MONTHLY_` and `YEARLY_` accordingly.
+
+**Important**: if *Daily Backup Retention* is zero or not set, the scheduled backup job takes **no backup at all** — the weekly, monthly and yearly backups are copies of the daily backup, so a daily retention of at least 1 is required for any scheduled backup to run. The Configuration page displays a warning banner if backup retention has not been set.
+{: .notice--warning}
 
 To access the cyclic retention settings:
 
@@ -72,6 +78,18 @@ To access the cyclic retention settings:
 1. Press `Save` to save your settings
 
 ![Cyclic backup retention](./../assets/images/backup-restore/cyclic-period-schedule.png "Cyclic backup retention")
+
+## Cloud backups
+
+By default, backups are stored on the application server's filesystem. Skyve applications can instead store backups in cloud storage (Azure Blob Storage), so backups survive the loss of the server:
+
+1. Login with a user which has the `SecurityAdministrator` role
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`
+1. On the `Startup Configuration` tab, navigate to the `Cloud Backup Settings` section
+1. Set the *Type* to `Azure Blob Storage` (or `None (Internal Backups)` to revert to server-local backups), and enter the *Connection String* and *Directory Name* for your storage account
+1. Click `Save`
+
+Once enabled, backups are stored in, listed from, downloaded from and restored from the cloud storage location.
 
 ## Restoring a Skyve backup
 
@@ -95,6 +113,12 @@ To restore a Skyve backup:
 1. The restore process is run as a Skyve *Job* and the progress and completion of the restore can be reviewed from the admin *Jobs* menu
 
 *WARNING*: Wait until the *Restore* process completes before taking any other actions. While the *Restore* process is in progress, data entry or other application activities may lead to unexpected results.
+
+### Backup validation
+
+Before any data is changed, the restore validates the uploaded backup — after extraction, Skyve checks that the backup's CSV data files are present in the root of the zip. If they are not, the restore aborts with the error *"No valid Skyve CSV files were found in the expected location (the root of the ZIP). If you have modified this ZIP, please ensure that it has been correctly recompressed"*.
+
+The most common cause is re-zipping an extracted backup on Windows or macOS in a way that nests the files one folder deep inside the zip. If you need to modify and recompress a backup, ensure the CSV files sit at the top level of the zip, not inside a subfolder.
 
 If the *Restore* fails - it is likely that previous user credentials will have been deleted by the restore and you may need to recover. 
 

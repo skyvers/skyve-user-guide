@@ -14,7 +14,7 @@ Communication templates are designed to be used as a rich email template, to sup
 1. Login with a user which has the `ContactManager` or `SecurityAdministrator` role
 2. Navigate to the Admin module, and select `Communication` -> `Communication Templates`
 3. Click the `+` symbol to create a new template
-4. Enter `Responsive Template` into Name
+4. Enter `Responsive Template` into Name (names are limited to 50 characters)
 5. Optionally provide your template with a description. This can be used to identify what they are used for if you have multiple templates in your system.
 6. Paste the source code for your template into the Template field. An example template is [included below](#example-template). In the default (responsive) interface the Template field is a plain text field you paste HTML into directly. In desktop mode, an `Edit` button opens a rich editor instead - click `Source` to switch it to source code mode, paste your HTML, and click `Apply`.
 7. Within your template, you must tell Skyve where the body of the email will be inserted. For example, if your template contains a header and a footer, the email body will sit in-between. To tell Skyve where this should be inserted, the expression `{body}` must appear somewhere within the email template. The Template field is pre-filled with `<p>{body}</p>` when you create a new template, so edit around it rather than adding it from scratch - a template cannot be saved without `{body}`.
@@ -25,6 +25,8 @@ Communication templates are designed to be used as a rich email template, to sup
     ![Select template]({{ site.url }}{{ site.baseurl }}/assets/images/communication-template/comm-template-2.png)
 
 11. You can now send the email to tagged recipients, or use the `Test Send to yourself` button on the `Manage` tab to send a test email (this requires at least one tagged record).
+
+Before editing an existing template, check the *Communications using this template* list at the bottom of the template view — it shows every Communication the template is applied to, so you can see the impact of a change before making it.
 
 #### Example Template
 An example of a basic HTML template which can be used as a communication template is included here. This is a modified version of the inline template from the [responsive-html-email-template](https://github.com/leemunroe/responsive-html-email-template) project on GitHub.

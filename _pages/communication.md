@@ -12,7 +12,7 @@ Communications within a Skyve application is where ad-hoc and system email messa
 
 ## Create and send a new Communication
 
-_Prerequisites:_ Your application has its SMTP settings configured to enable sending email.
+_Prerequisites:_ Your application has its SMTP settings configured to enable sending email. If SMTP is not configured, a warning banner is shown at the top of the Communication view.
 
 The following example will walk through using the built in Communication feature from the admin module to send an email from within a Skyve application. In this example, we will use the Tag feature to select some Contacts as the recipients of the test email.
 
@@ -55,9 +55,15 @@ The following example will walk through using the built in Communication feature
 
     ![Communication results]({{ site.url }}{{ site.baseurl }}/assets/images/communication/comm-4.png)
 
-22. Attachments can be added from the `Attachments` tab if required
-23. Click `Send Now`
-24. A new background job will be initiated to send your email immediately in the background. The results of the job can be checked from the `Jobs` screen.
+22. Attachments can be added from the `Attachments` tab if required (see [Attachments and calendar invites](#attachments-and-calendar-invites))
+23. Optionally, click `Test Send to yourself` first — this sends the email to your own email address, using the first tagged record for expression substitution, so you can check the result before sending to everyone. At least one record must be tagged or the test will fail with an error.
+24. Click `Send Now`
+25. A new background job will be initiated to send your email immediately in the background. The results of the job can be checked from the `Jobs` screen, or by clicking `Run Result Check Job` on the `Manage` tab.
+
+Two further options on the `Manage` tab affect the send:
+
+- **Untag successful documents**: each record is removed from the tag as its email sends successfully, so after a partial failure the tag contains only the records still to send.
+- **Notify when job is complete**: sends you a notification email when the send job finishes.
 
 ## Editing an existing Communication
 
@@ -72,3 +78,31 @@ _Prerequisites:_ Your application has at least one ad-hoc or system communicatio
 5. Modify the `To` or `CC To` fields if you would like to change who receives the communication. This can be an expression.
 6. Modify the `Subject (expression)` and/or the `Body (expression)` with any desired changes. These can contain expressions.
 7. Click `OK` to save the modifications
+
+_Note_: communications marked `Used for System communications` (such as the built-in password reset and user invitation emails) have their Description, Module and Document locked and cannot be deleted — you can still edit the subject and body. Untick the system flag first if you really need to change or remove one.
+
+## Embedding an image
+
+To embed an image in the email body without hosting it externally, use the `Add Uploaded Image` button in the `Options` section of the `Contents` tab. Upload an image file and Skyve will append it to the body as an embedded image.
+
+## Attachments and calendar invites
+
+The `Attachments` tab allows up to three files to be attached to the email.
+
+The `Attachments` tab also provides a `Calendar` section for sending calendar invites. Tick `Include Calendar Item` on the `Contents` tab, then specify the `Title (expression)`, `Start Time`, `End Time` and `Description (expression)` — recipients receive Google and Yahoo calendar links in the email body along with an `.ics` attachment for Outlook and Apple Calendar.
+
+## Unsubscribe links and Subscriptions
+
+For bulk communications, recipients should be given a way to opt out:
+
+1. On the `Contents` tab, click `Add Unsubscribe Link` in the `Options` section — this appends an unsubscribe link to the email body (using the `{unsubscribeUrl}` token, which is substituted per recipient).
+2. When a recipient clicks the link, a declined *Subscription* record is created for them for this communication.
+3. Declined recipients are shown on the communication's `Subscriptions` tab (visible once the communication has been saved), and are automatically excluded from future sends of that communication.
+
+## Generating files instead of sending
+
+Instead of emailing directly, a communication can generate the messages as `.eml` files on the server — useful for review, archiving, or processing by another system:
+
+1. On the `Manage` tab, click `Generate File Batch` — a batch of files is generated, one per tagged recipient.
+2. Each batch appears in the `Batches` list on the `Manage` tab.
+3. Select a batch and use `Download Zip` to download the generated files, or `Delete` to remove the batch from the server.
