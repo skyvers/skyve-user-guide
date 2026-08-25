@@ -12,7 +12,7 @@ Communications within a Skyve application is where ad-hoc and system email messa
 
 ## Create and send a new Communication
 
-_Prerequisites:_ Your application has its SMPT settings configured to enable sending email.
+_Prerequisites:_ Your application has its SMTP settings configured to enable sending email.
 
 The following example will walk through using the built in Communication feature from the admin module to send an email from within a Skyve application. In this example, we will use the Tag feature to select some Contacts as the recipients of the test email.
 

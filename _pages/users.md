@@ -83,7 +83,7 @@ To have the system send an invitation email to one or multiple new users, you ca
 
 _Prerequisites:_ 
 
-* Your application has its SMPT settings configured to enable sending email
+* Your application has its SMTP settings configured to enable sending email
 * You have at least one group created for user permissions (see above)
 
 1. Login with a user which has the `SecurityAdministrator` role

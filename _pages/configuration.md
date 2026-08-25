@@ -23,7 +23,7 @@ Application password complexity can be customised based on your organisation's s
 
 Send a test email to confirm that email configuration has been entered successfully in your application.
 
-_Prerequisites_: Your application has its SMPT settings configured to enable sending a test email.
+_Prerequisites_: Your application has its SMTP settings configured to enable sending a test email.
 
 1. Login with a user which has the `SecurityAdministrator` role
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`
@@ -34,25 +34,45 @@ _Prerequisites_: Your application has its SMPT settings configured to enable sen
 
 Skyve applications come with a default password reset email message. This can be customised to provide specific instructions for users of your application.
 
-_Prerequisites_: Your application has its SMPT settings configured to configure the password reset email.
+_Prerequisites_: Your application has its SMTP settings configured to configure the password reset email.
 
 1. Login with a user which has the `SecurityAdministrator` role
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`
 1. On the `General` tab, specify the `Password Reset` sender email address, subject and body.
+1. Optionally specify the `Password Reset Token Expiry (minutes)` to limit how long password reset links remain valid after they are requested. Clear this setting to have tokens that never expire.
 1. Click `Save`
 
 ## Two-Factor Authentication
 
-Two-Factor Authentication (2FA) enhances security by requiring an additional step to verify a user's identity. The configuration options are:
+Two-Factor Authentication (2FA) enhances security by requiring an additional step to verify a user's identity. When email 2FA is enabled, users must enter a one-time code sent to their email address each time they log in, in addition to their password.
+
+Email 2FA must first be activated for your application by your Skyve provider before it can be configured, and is available to customers covered by a support agreement. If it has not yet been activated, selecting `Email` as the Two-Factor Type will display a message advising you to contact [info@skyve.org](mailto:info@skyve.org) to enquire about enabling it.
+
+Once activated, the following configuration options are available:
 
 - **Two-Factor Type**: This can be set to one of the following values:
   - **Off**: Disables 2FA.
   - **Email**: Enables 2FA via email. A one-time code is sent to the user's email address and will be required to log in.
-- **Code Expiry Timeout**: Specify the duration (in minutes) for which the 2FA email code remains valid. 
-- **Two-factor Email subject**: Customise the email subject for the 2FA email sent to users.
-- **Two-factor body**: Customise the email body text for the 2FA email sent to users.
+- **Two-factor Email Subject**: Customise the email subject for the 2FA email sent to users.
+- **Two-factor Body**: Customise the email body text for the 2FA email sent to users. The body must include the `{tfaCode}` placeholder, which is replaced with the user's one-time code when the email is sent.
+- **Two Factor Code Timeout (seconds)**: Specify the duration (in seconds) for which the 2FA email code remains valid. The default is 300 seconds (5 minutes).
 
-_Note:_ Activating 2FA incurs an additional fee. Please contact info@skyve.org to enquire about enabling two factor email authentication for your application.
+### Configuring Email Two-Factor Authentication
+
+_Prerequisites_: Email 2FA has been activated for your application, your application has its SMTP settings configured, and your users have email addresses recorded against their contact details.
+
+1. Login with a user which has the `SecurityAdministrator` role.
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
+1. On the `General` tab, navigate to the `Two Factor Authentication` section.
+1. Set the `Two-Factor Type` to `Email`. A default email subject, body and code timeout will be pre-filled for you.
+1. Customise the email subject, body and code timeout as required, ensuring the body retains the `{tfaCode}` placeholder.
+1. Click `Save`.
+
+### What Users Will Experience
+
+Once email 2FA is enabled, it applies to all users of the application. After entering their username and password at the login page, users will be emailed a one-time verification code and prompted to enter it before they can access the application. If the code is not entered before the timeout elapses, they will need to log in again to be sent a new code.
+
+Users who do not receive their code should check their spam/junk folder, and confirm with an administrator that the email address recorded against their user account is correct.
 
 ## User Self-Registration
 
@@ -76,7 +96,7 @@ Skyve has the ability to monitor the available disk space of the server it is ru
 
 To schedule a disk space check which will email the system support user if disk falls below  a specified threshold, the user must have the *JobMaintainer* role in the admin module and have email configured.
 
-_Prerequisites_: Your application has its SMPT settings configured to send the disk space alarm email.
+_Prerequisites_: Your application has its SMTP settings configured to send the disk space alarm email.
 
 To schedule the disk space alarm job:
 
@@ -123,7 +143,7 @@ _Prerequisites_: Access to a SMTP server or email relay service (e.g. [Postmark]
 1. In the `Test Email` section, enter your email address and a test subject and email body and click `Send Mail`
 1. Verify you received the email
 
-_Note_: To prevent issues with email being sent from your Skyve application being flagged as spam, ensure the `General` tab's `Password Reset` -> `Send/From Email Address` and the `Startup` tab's `Configuration` -> `Mail Settings` -> `Default Sender` match the of your SMPT server or that of your application.
+_Note_: To prevent issues with email being sent from your Skyve application being flagged as spam, ensure the `General` tab's `Password Reset` -> `Send/From Email Address` and the `Startup` tab's `Configuration` -> `Mail Settings` -> `Default Sender` match that of your SMTP server or your application.
 
 ## Map Settings
 
@@ -149,7 +169,7 @@ Security settings enhance user safety and protect against unauthorized access:
 - **Check for Breached Password**: When users try to create or change a password, this checks whether the new password has been compromised in known data breaches (requires internet access).
 - **CAPTCHA Type**: Which CAPTCHA service to use for the self-registration and self-service password reset (forgot password) function. You may choose between Cloudflare Turnstile and Google Recaptcha or leave blank to not enable a CAPTCHA.
 - **Site and Secret Keys**: These are required if using either CAPTCHA service and can be obtained from the Google Recaptcha console or Cloudflare Turnstile console.
-- **Geo IP Key/Token**: By supplying a Geo IP API token (one can be obtained from [ipinfo.io](https://ipinfo.io/)), you can create a list of allowed or disalled countries for registration and password reset.
+- **Geo IP Key/Token**: By supplying a Geo IP API token (one can be obtained from [ipinfo.io](https://ipinfo.io/)), you can create a list of allowed or disallowed countries for registration and password reset. See [Geographical IP Restrictions](#geographical-ip-restrictions) below for detailed setup instructions.
 
 To modify the security settings for your application:
 
@@ -157,4 +177,56 @@ To modify the security settings for your application:
 1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
 1. On the `Startup` tab, navigate to the `Security Settings` section.
 1. Modify the security settings as required.
+1. Click `Save`.
+
+## Geographical IP Restrictions
+
+Introduced in Skyve 9.2, geographical IP (Geo IP) restrictions allow your application to allow or deny user self-registration and self-service password reset (forgot password) requests based on the country the request originates from. This can help protect your application from bot submissions and suspicious activity from unexpected locations.
+
+Geo IP restrictions are disabled by default. Skyve uses [ipinfo.io](https://ipinfo.io/) as the geolocation provider, so you will need to register for an account with ipinfo.io to obtain an API token before enabling this feature.
+
+The following options are available:
+
+- **Geo IP Key/Token**: The API token obtained from ipinfo.io. Entering a token enables the feature and reveals the remaining options below.
+- **Country List Type**: Determines how the selected countries are treated:
+  - **Whitelist**: Only requests from the selected countries are allowed; all other countries are denied.
+  - **Blacklist**: Requests from the selected countries are denied; all other countries are allowed.
+- **Countries**: The list of countries to allow (whitelist) or deny (blacklist).
+
+### Enabling Geographical IP Restrictions
+
+1. Register for an account at [ipinfo.io](https://ipinfo.io/) and obtain an API token.
+1. Login with a user which has the `SecurityAdministrator` role.
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
+1. On the `Startup` tab, navigate to the `Security Settings` section.
+1. Enter your API token into the `GEO IP Key/Token` field. The country selection options will then be displayed.
+1. Select the desired `Country List Type` (`Whitelist` or `Blacklist`).
+1. Move the applicable countries from `Available Countries` to `Selected Countries`.
+1. Click `Save`.
+
+Once enabled, self-registration and password reset requests from denied countries will be silently rejected (the requester receives no indication that they were blocked) and a `GEO IP Block` security event will be recorded against the affected user.
+
+### Geo IP Block Notifications
+
+To be notified by email when a Geo IP block occurs:
+
+1. Login with a user which has the `SecurityAdministrator` role.
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
+1. On the `Startup` tab, navigate to the `Notifications` section.
+1. Check `Geo IP Block Notifications`.
+1. Optionally specify a `Security Notifications Email Address`. If not specified, notifications will be sent to the support email address.
+1. Click `Save`.
+
+_Related_: When `Enable IP Address Checks` is enabled in the `Security Settings` section, Skyve also uses geolocation to log a security event when a user logs in from a different country than their previous logins. Check `Different Country Login Notifications` in the `Notifications` section to receive an email when this occurs.
+
+## Password Change Notifications
+
+Skyve applications can notify users by email whenever their password is changed, so they can alert support if the change was not made by them. When Geo IP is configured (see [Geographical IP Restrictions](#geographical-ip-restrictions)), the notification email also includes the location the password change was made from.
+
+_Prerequisites_: Your application has its SMTP settings configured, and a `Support Email Address` is specified in the `Environment Settings` (the notification invites users to contact this address if they suspect malicious activity, and is not sent without it).
+
+1. Login with a user which has the `SecurityAdministrator` role.
+1. Navigate to the `Admin` module, and under `Security Admin`, select `Configuration`.
+1. On the `Startup` tab, navigate to the `Notifications` section.
+1. Check `Password Change Notifications`.
 1. Click `Save`.
