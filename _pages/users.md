@@ -55,11 +55,13 @@ Groups can also be combined for customer-specific combinations, however these co
 4. Enter a Group Name and Description
 5. Add the desired combination of roles to the group by selecting them in the _Available Roles_ list and clicking the right arrow (`>`) to move them to _Assigned Roles_
 
+Once a group has been saved, zooming into it also provides a _Users in Group_ tab — a quick way to audit which users hold a particular set of permissions.
+
 ![Adding group roles](./../assets/images/users/adding-group-roles.png "Adding group roles")
 
 ### Adding a new User
 
-_Prerequisites:_ You have at least one group created for user permissions (see above).
+_Prerequisites:_ You have at least one group created for user permissions (see above) — or you can create one inline during the wizard's group step by choosing the _New group_ option.
 
 1. Login with a user which has the `SecurityAdministrator` role
 2. Navigate to the Admin module, and select _Users_ under Security Admin
@@ -75,8 +77,10 @@ _Prerequisites:_ You have at least one group created for user permissions (see a
 
 6. Change the generated username if required
 7. Enter a matching password and confirm password, then click *Next*
-8. Select the groups the new user will be added to by selecting them in the _Available Groups_ list then clicking the right arrow (`>`) to move them to _Assigned Groups_
+8. Select the groups the new user will be added to by selecting them in the _Available Groups_ list then clicking the right arrow (`>`) to move them to _Assigned Groups_ (or choose _New group_ to create a group inline)
 9. Click _OK_ to save the user
+
+When editing an existing user, Security Administrators can also click _Generate UserName_ to generate a unique username for the user.
 
 ### Inviting new users and bulk user creation
 
@@ -90,8 +94,9 @@ _Prerequisites:_
 1. Login with a user which has the `SecurityAdministrator` role
 2. Navigate to the Admin module, and select `Users` under Security Admin
 3. Select the _Invite Users_ tab
-4. From the list of Groups, assign any group permissions new users will have after they are invited by selecting the group(s) and clicking the right arrow (`>`)
-5. Enter a list of email addresses to be sent invitations into the text area below, separated by spaces, commas, semicolons or new lines
+4. From the list of Groups, assign any group permissions new users will have after they are invited by selecting the group(s) and clicking the right arrow (`>`) — at least one group must be selected or the invitation will not proceed
+5. Optionally select the `Default Module Name` — the module invited users will see when they first sign in
+6. Enter a list of email addresses to be sent invitations into the text area below, separated by spaces, commas, semicolons or new lines
 
 ![Bulk user creation](./../assets/images/users/bulk-user-creation.png "Bulk user creation")
 
@@ -99,6 +104,8 @@ If you have email configured:
 - press the *Create and Invite Users* button.
 
 This will initiate a Skyve Job (reviewable from the Admin->Jobs menu) to create each new user record and send each user a *password reset token*.
+
+The wording of the invitation email can be customised by creating a [Communication]({{ site.url }}{{ site.baseurl }}/communication/) named `SYSTEM User Invitation` — the system's default subject is "Invitation to join".
 
 If you have not yet configured email:
 - use the *Create Users (no invitation)* button and advise the users another way. 

@@ -9,8 +9,11 @@ sidebar:
 ---
 
 Another powerful feature of [List Grids]({{ site.url }}{{ site.baseurl }}/lists) in the desktop
-mode of Skyve applications is Tags. Tags allow you to filter and store the selection of records within a Skyve 
-list, or across multiple lists.
+mode of Skyve applications is Tags. Tags allow you to store a selection of records within a Skyve
+list, or across multiple lists, and act on that selection later — including [filtering a list to just
+the tagged records](#filtering-a-list-by-tag) and [performing bulk actions](#performing-bulk-actions-against-a-tag).
+
+Tags are private to the user that created them — other users cannot see your tags, but you can [copy a tag to another user](#sharing-a-tag).
 
 **Desktop mode required**: Tags are only available in _desktop mode_, including the `Admin -> Tags` menu item used later on this page. To switch modes, click your username in the top right hand corner and choose `Switch Mode` — see [Switching Interfaces]({{ site.url }}{{ site.baseurl }}/#switching-interfaces).
 {: .notice--info}
@@ -88,6 +91,15 @@ To make changes to which records are selected for an existing tag:
 1. Make the changes to your selected tag using the Tag column for single records or the tag menu to select/deselect all
 1. Tag selection changes are saved immediately, no further action is required
 
+The `Tag` menu also provides two further items:
+
+- **No Tag** — deselects the current tag, hiding the tag column again without changing which records are tagged.
+- **Clear all tagged** — removes _every_ record from the tag, across all lists, not just the records in the current list. Use `Untag all in list` if you only want to untag the records shown in the current list.
+
+## Filtering a list by Tag
+
+Selecting a tag does not filter the list — it shows the tag column so you can see and change which records are tagged. To reduce the list to only the tagged (or only the untagged) records, use the [advanced filter]({{ site.url }}{{ site.baseurl }}/lists/#advanced-filtering): add a criterion on the `Tag` field with the value `true` (tagged) or `false` (untagged).
+
 ## Deleting a Tag
 
 To delete an existing tag you no longer want to keep:
@@ -96,7 +108,42 @@ To delete an existing tag you no longer want to keep:
 1. From the `Tag` menu, hover over the name of the selected tag and select `Delete Tag`
 1. Select `Yes` to confirm deletion of the tag
 
-![Delete tag]({{ site.url }}{{ site.baseurl }}/assets/images/tags/delete-tag.png) 
+![Delete tag]({{ site.url }}{{ site.baseurl }}/assets/images/tags/delete-tag.png)
+
+## Tagging records from a file
+
+The `Load` tab of a Tag lets you tag (or untag) records in bulk by uploading a spreadsheet or CSV file of matching values — for example, a list of customer numbers extracted from another system.
+
+1. Navigate to Admin -> Tags and zoom into the tag
+1. Select the `Load` tab
+1. In the `Load` section, select the `Module` and `Document` whose records you wish to tag. From here you can also use `Tag All` to tag every record of that document, or `Clear Tag` to untag everything
+1. In the `Match` section, select the `Attribute` of the document to match your file values against, the `Filter Operator` (equals or like), and the `Column (first column is 1)` your values appear in within the file
+1. If your file's first row is a heading row, tick `Upload File has Column Headers`
+1. Click `Upload Tag Criteria` and choose your file
+1. Once processed, the result counts show how many rows were uploaded, how many matched, and how many records are now tagged
+
+## Combining Tags
+
+The `Combinations` tab lets you combine two tags using set operations — useful for questions like "tagged in last month's campaign but not this month's".
+
+1. Navigate to Admin -> Tags and zoom into the tag you wish to modify
+1. Select the `Combinations` tab
+1. Select the other tag to combine with, and the `Operator`:
+   - **Union** — add the other tag's records to this tag
+   - **Except** — remove the other tag's records from this tag
+   - **Intersect** — keep only records that are in both tags
+1. Click `Explain` to preview a description of what the combination will do
+1. Click `Perform Combination` to apply it to this tag
+
+## Sharing a Tag
+
+Tags are private to the user that created them, but a tag can be copied to another user:
+
+1. Navigate to Admin -> Tags and zoom into the tag
+1. In the `Copy` section, select the recipient in `Copy to user`
+1. Click `Make Copy`
+
+The copy is owned by the recipient and appears in their `Tag` menu — subsequent changes to your tag are not reflected in their copy.
 
 ## Performing bulk actions against a tag
 
@@ -130,4 +177,6 @@ Available default actions include:
 You can also select custom document actions that have been defined for the specific document type.
 
 The bulk action runs as a background job, allowing you to continue working while it processes the tagged items. 
-Progress is tracked and logged, with detailed results available in the [job](https://skyvers.github.io/skyve-user-guide/jobs/) execution log.
+Progress is tracked and logged, with detailed results available in the [job]({{ site.url }}{{ site.baseurl }}/jobs/) execution log.
+
+Tags are also used to select the recipients of a [Communication]({{ site.url }}{{ site.baseurl }}/communication/).

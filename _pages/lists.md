@@ -25,8 +25,10 @@ menu wider or narrower without collapsing it fully.
 
 ![Filter Line]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-line.png)
 
-The filter line provides the ability to quickly and easily filter the records in a list 
-based on `like` or `contains` searches. Multiple columns can have filters applied which 
+The filter line provides the ability to quickly and easily filter the records in a list. 
+Each column uses a fixed filter operator suited to its type (e.g. a `contains` match for text 
+columns) — to choose a different operator, use the [advanced filter](#advanced-filtering). 
+Multiple columns can have filters applied which 
 will `and` their results together (i.e. it must match _all_ filters, not _any of_).
 
 ![Filter button]({{ site.url }}{{ site.baseurl }}/assets/images/lists/filter-simple.png)
@@ -104,6 +106,8 @@ Below is an example of a list with grouping applied:
 
 ![Applied grouping]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-grouping-2.png)
 
+To remove the grouping, right-click a column heading again and choose `Ungroup`.
+
 ### Show/Hide Columns
 
 Sometimes lists can include additional columns which are not shown by default, or you may 
@@ -120,7 +124,13 @@ To save a particular combination of columns, see [Snapshots]({{ site.url }}{{ si
 ![List Tools]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ListTools.PNG)
 
 The list toolbar provides a variety of basic and more complex functions for manipulating and working with 
-lists in Skyve in desktop mode.
+lists in Skyve in desktop mode. Alongside the tools described below, the toolbar always provides 
+record controls (`New`, `Zoom`, `Popout`, `Edit` and `Delete`), `Deselect all`, `Clear filter criteria` 
+and `Refresh table data`.
+
+Most of these functions are also available by right-clicking a _row_ in the list, which opens a 
+context menu with `New`, `Zoom`, `Popout`, `Edit`, `Delete`, `Deselect`, `Clear Filter`, `Refresh`, 
+`Export Data...` and `Chart Data...`.
 
 ### Advanced Filtering
 
@@ -137,6 +147,10 @@ select the filter operator and enter the data you wish to find.
 
 ![Flat advanced filter]({{ site.url }}{{ site.baseurl }}/assets/images/lists/advanced-filter-flat.png)
 
+The advanced filter can also filter on the `Tag` and `Flag` fields — for example, add a criterion 
+on `Tag` equals `true` to reduce the list to only the records in the currently selected 
+[tag]({{ site.url }}{{ site.baseurl }}/tags/).
+
 ### Export Data
 
 A key feature of List Grids is the ability to easily export data in a variety of formats 
@@ -150,10 +164,10 @@ The key areas of the export data options are:
 
 Report Option | Description
 ------------- | -----------
-report format | Allows you to pick the export file type, e.g. CSV, XLS, PDF.
+report format | Allows you to pick the export file type, e.g. CSV, XLSX, PDF, DOCX. The available formats are configured per application.
 page format   | Allows you to configure the page size and orientation.
 margins       | Specify any margins for the report.
-columns       | This allows you to choose which columns from the list should be included in the export. By default, columns that are visibile in the list will be exported (right-hand side). All columns, including those not shown are available for export.
+columns       | This allows you to choose which columns from the list should be included in the export. By default, columns that are visible in the list will be exported (right-hand side). All columns, including those not shown are available for export.
 
 After clicking `Generate`, your file will be generated and will appear in your downloads. To change the data 
 shown in the export file, drag and drop between the two columns. If the report is formatted, you can change 
@@ -162,6 +176,9 @@ the widths on the right hand side of the column selector.
 Any simple or complex filtering applied to the list will still be applied when the data is exported. This 
 allows a specific subset of data to be exported. Combining this with a [Snapshot]({{ site.url }}{{ site.baseurl }}/snapshots)
 can allow exports to be consistently produced as an ad-hoc report.
+
+When exporting a large list, you will be asked to confirm before proceeding — exports over a thousand 
+rows may take a few seconds, and exports over ten thousand rows can take more than a minute.
 
 ### Chart Data
 
@@ -176,12 +193,16 @@ To Chart Data, click on the `Chart this data` button from the list toolbar.
 
 The key areas of the chart options are:
 
-Chart Option   | Description 
--------------- | -----------
-chart type     | the type of chart to generate, pie, line, etc
-category field | selects which field is used to categorise the data, this can be combined with a bucket, e.g. to group data by year
-value field    | selects which field values are displayed in the chart
-value function | can be used to produce a numeric value for non-numeric fields, e.g. a count, or to sum numeric data
+Chart Option    | Description 
+--------------- | -----------
+chart type      | the type of chart to generate — line, line area, bar, horizontal bar, radar, pie, doughnut or polar area
+chart title     | an optional title displayed on the generated chart
+category field  | selects which field is used to categorise the data
+category bucket | groups category values into buckets, e.g. numeric ranges, starts-with, or temporal buckets such as year or month
+value field     | selects which field values are displayed in the chart
+value function  | can be used to produce a numeric value for non-numeric fields, e.g. a count, or to sum numeric data
+top N           | limits the chart to the top N categories (by category or value, ascending or descending), optionally combining the rest into an "Others" category
+order           | controls the ordering of the chart's categories
 
 Click `Generate` to produce the chart and visualise your data.
 
@@ -204,10 +225,14 @@ multiple lists. See [Tags]({{ site.url }}{{ site.baseurl }}/tags) for a more det
 
 Flags are a useful tool for setting reminders or alerting others of something of 
 note. To set a flag, click in the `Flag` column next to the record, then enter 
-the text you wish to show and click `Flag`. The flag icon will show in the list and 
+the text you wish to show and click `Flag`. The flag editor supports rich text, up to 
+1024 characters. The flag icon will show in the list and 
 when hovered over will display the message stored. To clear the flag, click the flag
 and click `Clear`. If you wish to search by contents in a flag, they can be filtered
-just like any other field. 
+just like any other field.
+
+_Note_: flagging is a permission — if your user has not been granted access to flags, the 
+`Flag` column will not be shown.
 
 ## Summary Line
 
@@ -218,3 +243,6 @@ in the left corner can be applied to enact a number of summary functions on the 
 
 There are functions to find the `Count` of the data, the average, the minimum and maximum, 
 and the sum of any field.
+
+The selected summary function is saved as part of a [Snapshot]({{ site.url }}{{ site.baseurl }}/snapshots), 
+so a list can be restored complete with its summary.

@@ -32,3 +32,17 @@ To enable self-registration:
 ## Managing self-registered accounts
 
 Registered users activate their own account via the link in their activation email. If a user does not receive the email or their link has expired, an administrator can resend the activation email or activate the account manually from the user's record — see [Activating a self-registered user]({{ site.url }}{{ site.baseurl }}/users/#activating-a-self-registered-user).
+
+## What the user sees
+
+Once self-registration is enabled, the sign in page shows a *Register* link below the login form. The registration form asks for the user's name, email address (entered twice to confirm), and a password (also confirmed). If a CAPTCHA has been configured in the [security settings]({{ site.url }}{{ site.baseurl }}/configuration/#security-settings), the user must complete it before registering.
+
+After clicking *Register*, the user is told to check their email (including their spam folder) for an activation link. Clicking the link activates their account, and they can then sign in. If the link has expired or the account is already activated, the activation page says so — an administrator can [resend the activation email]({{ site.url }}{{ site.baseurl }}/users/#activating-a-self-registered-user) if needed.
+
+## Troubleshooting
+
+The application surfaces warnings when self-registration is not fully configured:
+
+- *"Self-registration has been enabled - please ensure that email is configured and a self-registration group is chosen"* — shown on the Configuration page until both prerequisites are in place.
+- The *Allow User Self Registration* checkbox is greyed out for multi-tenant applications — self-registration requires a single-tenant application.
+- Registration emails will not send if mail settings are missing, or if *Test Mode* is enabled or a *Test Mail Recipient* is set (which redirect all email).

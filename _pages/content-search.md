@@ -28,6 +28,6 @@ To use the global search function from a Skyve application:
     ![Global search button]({{ site.url }}{{ site.baseurl }}/assets/images/search.png)
 
 4. Enter a search term (at least 4 characters) into the search field and click `Search`
-5. Search results will be returned in order of relevance, showing which document the result was found in and an excerpt of the resulting match
+5. Search results will be returned in order of relevance, showing which document the result was found in, an excerpt of the resulting match, and a `Score` column indicating how strong each match is. If your term found no strong matches, a "Did you mean ..." suggestion may be offered — click it to search for the suggested spelling
 6. Clicking the `data` link will take you to the record which contains the search result
 7. Clicking the `content` link will open the uploaded file which contains the search result

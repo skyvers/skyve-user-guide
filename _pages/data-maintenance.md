@@ -80,5 +80,12 @@ To import new data into a Skyve application using the Quick Import/Export functi
 9. Click the `x` in the top right corner to close the upload dialog
 10. If the upload was successful, the Configure Import Columns table should be populated with the column headings from the spreadsheet.
 11. Modify any bindings in the Configure Import Columns table to match the correct attributes of the destination Document
-12. Click `Import data from file` to load the data from the spreadsheet
-13. You can either Save this configuration to re-use it again, or click Cancel
+12. Review the import options in the Configure Options section:
+    - **Column Headers**: tick if the first row of your file contains column headings rather than data
+    - **Loading strategy**: `Create related records if they don't exist` (recommended) only creates referenced records when a match can't be found; `Create everything even if there might be duplicates` always creates new records
+    - **Detailed logging**: logs every imported row to the server log, useful when diagnosing a failed import
+13. Click `Import data from file` to load the data from the spreadsheet, and confirm the prompt
+14. You can either Save this configuration to re-use it again, or click Cancel
+
+**There is no undo for an import** — the confirmation prompt recommends backing up your data before proceeding, and so do we: see [Backup and restore]({{ site.url }}{{ site.baseurl }}/backup-restore/).
+{: .notice--warning}
