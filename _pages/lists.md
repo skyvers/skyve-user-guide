@@ -8,8 +8,10 @@ sidebar:
   nav: docs
 ---
 
-To get the most functionality out of list grids in Skyve, switch into power user 
-mode (from the top right hand corner, switch to power user mode if not already in there).
+To get the most functionality out of list grids in Skyve, switch into desktop mode
+(click your username in the top right hand corner and choose `Switch Mode`). Note that most of
+the features described on this page - tagging, flags, snapshots, exporting, charting and the
+summary line - are only available in desktop mode.
 
 ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
 
@@ -63,7 +65,7 @@ by clicking on the menu item on the left hand side that you clicked to get to yo
 ![Column menu]({{ site.url }}{{ site.baseurl }}/assets/images/lists/column-menu.png)
 
 The column menu is available by right-clicking on a column heading. This will provide 
-advanced options for soring, grouping, resizing and showing/hiding columns.
+advanced options for sorting, grouping, resizing and showing/hiding columns.
 
 ### Auto Fit
 
@@ -120,7 +122,7 @@ To save a particular combination of columns, see [Snapshots]({{ site.url }}{{ si
 ![List Tools]({{ site.url }}{{ site.baseurl }}/assets/images/lists/ListTools.PNG)
 
 The list toolbar provides a variety of basic and more complex functions for manipulating and working with 
-lists in Skyve in power user mode.
+lists in Skyve in desktop mode.
 
 ### Advanced Filtering
 
@@ -165,7 +167,7 @@ can allow exports to be consistently produced as an ad-hoc report.
 
 ### Chart Data
 
-List grids in Skyve power user mode are excellent for ad-hoc reporting. Whether using complex filtering, 
+List grids in Skyve desktop mode are excellent for ad-hoc reporting. Whether using complex filtering, 
 [summary functions](#summary-line) or [exporting your data](#export-data) to continue in Excel, R or 
 other applications to continue working with your data. Another option List grids provide is 
 charting your data.

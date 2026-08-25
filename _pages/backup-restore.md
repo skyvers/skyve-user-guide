@@ -19,10 +19,10 @@ To take a backup, the user must have the *DevOps* role in the admin module.
 To take the backup:
 
 1. Login with a user which has the `DevOps` role
-1. Navigate to the Admin module, and select the *Data Maintenance* menu item
+1. Navigate to the Admin module, and under *DevOps*, select *Data Maintenance*
 1. Switch to the *Backup/Restore* tab
-1. Press the *Backup* button (bottom RHS of the view) 
-1. Once the backup is complete, refresh the *Backups* list to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
+1. Press the *Backup* button in the *Backups* section
+1. Once the backup is complete, press *Refresh List* to check it is complete (it may take some time) - note that the backup process is run as a Skyve *Job* and the progress and completion of the backup can be reviewed from the admin *Jobs* menu
 1. If you wish to download the backup, select the backup from the list and press *Download Backup*
 
 ### Backup options
@@ -30,13 +30,13 @@ Before making a backup, there are options found next to the *Backup* button, hig
 
 - **Content** - *Content* refers to files and attachments that are uploaded to the system. By default, this check-box is ticked. Untick this to exclude content from the backup that will be created.
 - **Audit Log** - *Audit log* is the records of changes in the system. A list of audits can be found by navigating to *Admin -> Audits* in the menu. By default, this check-box is ticked. Untick this to exclude audit logs from the backup that will be created.
-- **Sensitivity** - While making a backup, skyve has the ability to redact certain data for security purposes. The drop-down is used to select the sensitivity level to be used during redaction. Attributes with security level that is greater than or equal to the security level selected are redacted. Below are the security levels available in ascending order in terms of sensitivity:
-		- **None**
-		- **Internal** 
-		- **Confidential**
-		- **Restricted**
-		- **Personal**
-		- **Secret**
+- **Sensitivity** - While making a backup, Skyve has the ability to redact certain data for security purposes. The drop-down is used to select the sensitivity level to be used during redaction. Attributes with security level that is greater than or equal to the security level selected are redacted. Below are the security levels available in ascending order in terms of sensitivity:
+    - **None**
+    - **Internal**
+    - **Confidential**
+    - **Restricted**
+    - **Personal**
+    - **Secret**
 
 ## Scheduling regular backups
 
@@ -66,7 +66,7 @@ The Skyve platform includes cyclic retention settings to allow you to control ho
 To access the cyclic retention settings:
 
 1. Login with a user which has the `DevOps` role
-1. Navigate to the Admin module, and select the *Data Maintenance* menu item
+1. Navigate to the Admin module, and under *DevOps*, select *Data Maintenance*
 1. Switch to the *Backup/Restore* tab
 1. Set the cyclic retention settings (shown below) as required.
 1. Press `Save` to save your settings
@@ -84,14 +84,14 @@ Skyve offers a number of *Pre-Process* options to handle cases where the applica
 To restore a Skyve backup:
 
 1. Login with a user which has the `DevOps` role
-1. Navigate to the Admin module, and select the *Data Maintenance* menu item
+1. Navigate to the Admin module, and under *DevOps*, select *Data Maintenance*
 1. Switch to the *Backup/Restore* tab
     1. If restoring from an application which may have a different version of the application, we recommend performing a backup immediately prior to a restore to ensure you can recover if the restore fails.
-1. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the backup area - inside the application *content* folder)
-1. Refresh the backup list to check the upload was successful
+1. If you are restoring a backup from another instance or system, press *Upload Backup* to upload the backup zip file (alternatively, place the zip into the `backup_<customer>` folder under the configured backup directory on the server - by default this is inside the application *content* folder)
+1. Press *Refresh List* to check the upload was successful
 1. Select the uploaded backup in the list
 1. Select the appropriate *Content Option*, *Indexing Option* and *Pre-Process* (all explained below)
-1. Press the *Restore* button (bottom RHS of the view) 
+1. Press the *Restore* button in the *Restore* section
 1. The restore process is run as a Skyve *Job* and the progress and completion of the restore can be reviewed from the admin *Jobs* menu
 
 *WARNING*: Wait until the *Restore* process completes before taking any other actions. While the *Restore* process is in progress, data entry or other application activities may lead to unexpected results.
@@ -105,7 +105,7 @@ If the *Restore* fails - it is likely that previous user credentials will have b
     2. change the `environment` setting in the application `.json` file to a non-null value - e.g. `"recovery"`
     3. set a bootstrap user in the application `.json` file
     4. restart the wildfly service or redeploy the application 
-    5. log in and resolve the restore or restore the backup you took in step 4.i. above
+    5. log in and resolve the restore, or restore the backup you took immediately prior to attempting the restore
     6. once the situation is resolved, revert the `environment` and `bootstrap` settings in the application `.json` file
     7. restart the wildfly service or redeploy the application
 
@@ -122,20 +122,20 @@ In this situation, the options provide are as follows:
 Option | Description
 -------|-----------
 *Clear Orphaned Content IDs* | With this option selected, the restore will clear any orphaned content IDs leaving the associated `content` type attributes `null`. 
-*Save Orphaned Content IDs* | With this option selected, the restore will preserve orphaned content IDs, which may be useful if an attempt will alter be made to reunite content items with the structure data store.
+*Save Orphaned Content IDs* | With this option selected, the restore will preserve orphaned content IDs, which may be useful if an attempt will later be made to reunite content items with the structured data store.
 *Error* | (*Recommended*) With this options set, if orphaned content items are discovered during the restore, the restore will fail (error) and roll-back. 
 
 The recommended setting is *Error*.
 
 If this option is set and a *Domain Exception* occurs during restore (check the restore Job log via the admin *Jobs* menu), it may be that the backup was taken from an instance with orphaned content Ids.
 
-In this case we recommend the resolving the data issues in the original system (where the backup was taken from), and take another backup - then restore this backup.
+In this case we recommend resolving the data issues in the original system (where the backup was taken from), and take another backup - then restore this backup.
 
 Alternatively, change the option to *Clear Orphaned Content IDs* and restore the backup.
 
 ### Indexing Option
 
-Skyve maintains an index to long text items and content items in a consolidated index that supports federated (i.e system-wide) searching (See [Content Search](./../_pages/content-search.md))
+Skyve maintains an index to long text items and content items in a consolidated index that supports federated (i.e system-wide) searching (See [Content Search](/content-search/))
 
 While indexing is not critical to the restore process, content searching will be invalid after a restore until the indexing process is completed.
 
@@ -150,7 +150,7 @@ None | Use this option if you intend to perform indexing at another time.
 
 The recommended setting is *Both*.
 
-To perform indexing after the restore is complete, use the *Reindex* action on the *Content* tab.
+To perform indexing after the restore is complete, run one of the reindex jobs from the admin *Jobs* menu: *admin - Reindex all data and attachments*, *admin - Reindex all data*, or *admin - Reindex all attachments*. (In desktop mode, equivalent *Reindex* actions are also available on the Data Maintenance *Content* tab.)
 
 ### Restore Pre-Process
 
@@ -164,7 +164,7 @@ Some options are only available for single-tenant applications - that is, where 
 
 Option | Availability | Description 
 -------|--------------|-------------
-*None* | All | Use this option when you've created your database from scratch (or with the bootstrap) and Skyve has created all database objects. You know the backup is from the same version and the schema is synchronised (matches the metadata). 
+*No Processing* | All | Use this option when you've created your database from scratch (or with the bootstrap) and Skyve has created all database objects. You know the backup is from the same version and the schema is synchronised (matches the metadata). 
 *Drop tables using metadata & recreate tables from backup create.sql* | Single tenant | Use this option when your backup is from a different version of the application, you want the schema to be dropped (the schema matches the metadata) using the system metadata deployed, but you need the schema to look like it did when the backup was taken. (Part of the restore post-process is to sync the schema and reindex content.)
 *Drop tables using backup drop.sql & recreate tables from backup create.sql* | Single tenant | Use this option when your schema matches the application version of the backup (maybe your previous attempt to restore failed). You can't drop the schema without stopping the server and if you do that, you can't log in any more without restoring. Since the backup/restore only looks after tables under Skyve control, it could be that extra tables have constraints that you need to drop or other issues that you only find after trying to restore.
 *Drop tables using metadata & recreate tables from metadata* | Single tenant | Use this option when you know the backup is from the same version of the application. You have a large amount of data that you want to delete and the quickest way is drop and recreate the schema.

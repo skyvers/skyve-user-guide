@@ -17,7 +17,7 @@ _Prerequisites:_ Your application has its SMTP settings configured to enable sen
 The following example will walk through using the built in Communication feature from the admin module to send an email from within a Skyve application. In this example, we will use the Tag feature to select some Contacts as the recipients of the test email.
 
 1. Login with a user which has the `ContactManager` or `SecurityAdministrator` role
-2. From the top right hand corner, switch to power user mode if not already in there
+2. Switch to desktop mode if not already in it, by clicking your username in the top right hand corner and choosing `Switch Mode` (tagging records from a list is only available in desktop mode)
 
     ![Switch mode]({{ site.url }}{{ site.baseurl }}/assets/images/switch.png)
     
@@ -39,26 +39,25 @@ The following example will walk through using the built in Communication feature
 
 10. From the admin menu, select Communication->`Communications`
 11. Click the `+` symbol to create a new Communication
-12. Enter `test email` into Description
-13. Select `Admin` as the Module from the drop-down
-14. Select `Contact` as the Document from the drop-down
-13. Select the tag we just created, `email contacts`, from the Tag drop-down
-14. Click `Save` to save your Communication
-15. Click `Get Count` and it should show the number of tagged Contacts in the Reulsts section
-
-    ![Communication results]({{ site.url }}{{ site.baseurl }}/assets/images/communication/comm-4.png)
-
-16. Select the `Contents` tab
-17. In the `To:` address, we are going to enter an expression to use a field from the tagged contacts. This operates similarly to a mail merge, and Skyve will substitue the expression value with the contact value for each tagged record. Enter `{email1}`, which is the name of the contact *email address* field.
-18. Enter `test email` into Subject (this can also be an expression)
-19. Click the `Edit` button to the right of Body to open the HTML editor
-20. Enter some text into the email body and click `Apply`
+12. On the `Contents` tab, enter `test email` into Description
+13. In the `To` field, we are going to enter an expression to use a field from the tagged contacts. This operates similarly to a mail merge, and Skyve will substitute the expression value with the contact value for each tagged record. Enter `{email1}`, which is the name of the contact *email address* field.
+14. Enter `test email` into `Subject (expression)` (this can also contain expressions)
+15. Enter some text into `Body (expression)`. In the default (responsive) interface this is a plain text field — type your message, or paste in HTML directly. In desktop mode, an `Edit` button opens a rich HTML editor instead — enter your text and click `Apply`.
 
     ![communication properties]({{ site.url }}{{ site.baseurl }}/assets/images/communication/comm-5.png)
 
-21. Attachments can be added from the `Options` tab, but for now return to the `Manage` tab
-22. Click `Send Now`
-23. A new background job will be initiated to send your email immediately in the background. The results of the job can be checked from the `Jobs` screen.
+16. Select the `Manage` tab
+17. Select `Admin` as the Module from the drop-down
+18. Select `Contact` as the Document from the drop-down
+19. Select the tag we just created, `email contacts`, from the Tag drop-down
+20. Click `Save` to save your Communication
+21. Click `Get Count` and it should show the number of tagged Contacts in the Results section
+
+    ![Communication results]({{ site.url }}{{ site.baseurl }}/assets/images/communication/comm-4.png)
+
+22. Attachments can be added from the `Attachments` tab if required
+23. Click `Send Now`
+24. A new background job will be initiated to send your email immediately in the background. The results of the job can be checked from the `Jobs` screen.
 
 ## Editing an existing Communication
 
@@ -71,5 +70,5 @@ _Prerequisites:_ Your application has at least one ad-hoc or system communicatio
 3. Open the communication you wish to edit
 4. Select the `Contents` tab
 5. Modify the `To` or `CC To` fields if you would like to change who receives the communication. This can be an expression.
-5. Modify the `Subject` and/or the `Body` with any desired changes. These can contain expressions.
-6. Click `OK` to save the modifications 
+6. Modify the `Subject (expression)` and/or the `Body (expression)` with any desired changes. These can contain expressions.
+7. Click `OK` to save the modifications

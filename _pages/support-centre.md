@@ -18,7 +18,7 @@ The Biz Hub support centre is the best way
 
 ### Signing in
 
-Once you have been provided with an account, open a browser an navigate to the [Biz Hub Support Centre](https://apps.bizhub.com.au), then sign in using your email address.
+Once you have been provided with an account, open a browser and navigate to the [Biz Hub Support Centre](https://apps.bizhub.com.au), then sign in using your email address.
 
 If you don't know, or have forgotten your password, use the `Reset your password` link at the bottom of the page.
 
